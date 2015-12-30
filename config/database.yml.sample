@@ -1,0 +1,24 @@
+common: &common
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  host: localhost
+  username: root
+  password: 
+
+development:
+  <<: *common
+  database: brs_development
+
+test:
+  <<: *common
+  database: brs_test
+
+staging:
+  <<: *common
+  database: brs_staging
+
+production:
+  <<: *common
+  database: brs
