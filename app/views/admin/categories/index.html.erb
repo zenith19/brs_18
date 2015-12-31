@@ -1,0 +1,24 @@
+<h1><%= t "all_categories" %></h1>
+
+<table class="table">
+  <thead>
+    <th><%= t "name" %></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <% @categories.each do |category|%>
+      <tr>
+        <td><%= category.name %></td>
+        <td align="right">
+          <%= link_to t(:edit), edit_admin_category_path(category),
+            class: "btn btn-primary" %>
+          <%= link_to t(:delete), [:admin, category], method: :delete,
+            class: "btn btn-danger", data: {confirm: t(:confirm_message)} %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @categories %>
+<%= page_entries_info @categories %>
