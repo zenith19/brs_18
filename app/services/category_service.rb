@@ -10,4 +10,12 @@ class CategoryService
       false
     end
   end
+
+  def update category_params
+    if @category.update_attributes category_params
+      true
+    else
+      false
+    end
+  end
 end
