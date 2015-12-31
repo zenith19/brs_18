@@ -41,3 +41,9 @@ en:
       - :year
     formats:
       short: "%d-%m-%Y"
+  account: "Account"
+  profile: "Profile"
+  log_in: "Log in"
+  log_out: "Log out"
+  about: "About"
+  users: "Users"
