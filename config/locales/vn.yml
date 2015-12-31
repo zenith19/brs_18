@@ -1,8 +1,16 @@
 vn:
-  welcome_message: "Chào mừng đến"
-  system_name: "Framgia Book Review System"
-  about: "Trong khoảng"
-  contact: "Liên Hệ"
-  home: "Nhà"
-  dev_by: "Được phát triển bởi"
-  sign_up_now: "Đăng ký ngay!"
+  access_denied: truy cập bị từ chối
+  about: Trong khoảng
+  add_request: Thêm một yêu cầu
+  contact: Liên Hệ
+  dev_by: Được phát triển bởi
+  home: Nhà
+  request: yêu cầu
+  requests:
+    new:
+      flash_request_success: Yêu cầu tạo thành công
+      sent_request: Đã gửi yêu cầu
+  sign_up_now: Đăng ký ngay!
+  system_name: Framgia Book Review System
+  view_all_request: Xem Tất cả Yêu cầu
+  welcome_message: Chào mừng đến
