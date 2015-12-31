@@ -40,6 +40,8 @@ en:
   category_delete_message: "Category deleted"
   all_categories: "All categories"
   confirm_message: "You sure?"
+  update_book: "Update book"
+  book_updated_text: "Book updated Successfully"
   date:
     order:
       - :day
