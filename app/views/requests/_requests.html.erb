@@ -1,0 +1,9 @@
+<tr>
+  <% @requests.each do |request| %>
+    <td><%= request.title %></td>
+    <td><%= request.author %></td>
+    <td><%= request.publisher %></td>
+    <td><%= request.link %></td>
+    <td><%= request.status %></td>
+  <% end %>
+</tr>

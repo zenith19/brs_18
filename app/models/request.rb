@@ -5,4 +5,6 @@ class Request < ActiveRecord::Base
   validates_presence_of :author
   validates_presence_of :publisher
   validates_presence_of :link
+
+  enum status: [:pending]
 end

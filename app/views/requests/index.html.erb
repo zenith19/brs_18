@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h1><%= t ".all_request" %></h1>
+    <br/>
+    <table class="table table-hover table-bordered text-center">
+      <thead>
+        <tr>
+          <th><%= t ".book_title" %></th>
+          <th><%= t ".book_author" %></th>
+          <th><%= t ".publisher" %></th>
+          <th><%= t ".link" %></th>
+          <th><%= t ".status" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render "requests" %>
+      </tbody>
+    </table>
+    <%= paginate @requests %>
+    <%= page_entries_info @requests %>
+  </div>
+</div>

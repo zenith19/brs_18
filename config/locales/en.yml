@@ -1,6 +1,6 @@
 en:
-  access_denied: Access Denied
   about: About
+  access_denied: Access Denied
   add_request: Add a Request
   contact: Contact
   dev_by: Developed by
@@ -8,6 +8,13 @@ en:
   home: Home
   request: Request
   requests:
+    index:
+      all_request: My Requests
+      book_author: Author Name
+      book_title: Book Title
+      link: Link
+      publisher: Publisher
+      status: Status
     new:
       flash_request_success: Request Successfully Created
       sent_request: Send Request

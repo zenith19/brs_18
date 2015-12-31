@@ -1,12 +1,19 @@
 vn:
-  access_denied: truy cập bị từ chối
   about: Trong khoảng
+  access_denied: truy cập bị từ chối
   add_request: Thêm một yêu cầu
   contact: Liên Hệ
   dev_by: Được phát triển bởi
   home: Nhà
   request: yêu cầu
   requests:
+    index:
+      all_request: Các yêu cầu của tôi
+      book_author: Tên tác giả
+      book_title: Tên sách
+      link: liên kết
+      publisher: nhà phát hành
+      status: trạng thái
     new:
       flash_request_success: Yêu cầu tạo thành công
       sent_request: Đã gửi yêu cầu
