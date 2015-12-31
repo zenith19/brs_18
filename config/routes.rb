@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
     namespace :admin do
       root "books#new"
+      resources :categories, only: [:new, :create]
       resources :books, only: [:new, :create]
     end
 

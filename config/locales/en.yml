@@ -28,6 +28,12 @@ en:
   add_url: "or image URL"
   book_added_text: "Book Added"
   form_contains: "The form contains"
+  add_new: "Add new"
+  view_all: "View all"
+  category: "Category"
+  new_category: "New Category"
+  add_category_text: "Add Category"
+  add_category_sucessful_message: "Category added"
   date:
     order:
       - :day
