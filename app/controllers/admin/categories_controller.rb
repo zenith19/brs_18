@@ -13,6 +13,18 @@ class Admin::CategoriesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if CategoryService.new(@category).update category_params
+      flash[:success] = t "update_category_sucessful_message"
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
   private
   def category_params
     params.require(:category).permit :name, :picture

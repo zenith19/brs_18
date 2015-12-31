@@ -34,6 +34,9 @@ en:
   new_category: "New Category"
   add_category_text: "Add Category"
   add_category_sucessful_message: "Category added"
+  save_change_text: "Save changes"
+  edit_category_text: "Edit Category"
+  update_category_sucessful_message: "Category updated"
   date:
     order:
       - :day
