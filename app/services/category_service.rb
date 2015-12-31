@@ -18,4 +18,13 @@ class CategoryService
       false
     end
   end
+
+  def destroy
+    if @category.valid?
+      @category.destroy
+      true
+    else
+      false
+    end
+  end
 end

@@ -37,6 +37,9 @@ en:
   save_change_text: "Save changes"
   edit_category_text: "Edit Category"
   update_category_sucessful_message: "Category updated"
+  category_delete_message: "Category deleted"
+  all_categories: "All categories"
+  confirm_message: "You sure?"
   date:
     order:
       - :day
