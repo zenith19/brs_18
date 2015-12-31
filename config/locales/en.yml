@@ -1,8 +1,17 @@
 en:
-  welcome_message: "Welcome to"
-  system_name: "Framgia Book Review System"
-  about: "About"
-  contact: "Contact"
-  home: "Home"
-  dev_by: "Developed by"
-  sign_up_now: "Sign up now!"
+  access_denied: Access Denied
+  about: About
+  add_request: Add a Request
+  contact: Contact
+  dev_by: Developed by
+  hello: Hello world
+  home: Home
+  request: Request
+  requests:
+    new:
+      flash_request_success: Request Successfully Created
+      sent_request: Send Request
+  sign_up_now: Sign up now!
+  system_name: Framgia Book Review System
+  view_all_request: View All Requests
+  welcome_message: Welcome to
