@@ -2,13 +2,17 @@
 
 <table class="table">
   <thead>
+    <th></th>
     <th><%= t "name" %></th>
+    <th><%= t "books_count" %></th>
     <th></th>
   </thead>
   <tbody>
     <% @categories.each do |category|%>
       <tr>
+        <td><%= image_tag category.picture_url(:thumb) if category.picture? %></td>
         <td><%= category.name %></td>
+        <td><%= category.books.count %></td>
         <td align="right">
           <%= link_to t(:edit), edit_admin_category_path(category),
             class: "btn btn-primary" %>
