@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       resources :requests, only: [:index]
     end
 
+    resources :users, only: :index
     devise_for :users, controllers: {registrations: "registrations"}
     resources :requests, only: [:index, :new, :create, :update]
   end
