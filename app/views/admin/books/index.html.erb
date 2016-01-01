@@ -7,6 +7,7 @@
     <th><%= t "author" %></th>
     <th><%= t "publish_date" %></th>
     <th><%= t "page" %></th>
+    <th></th>
   </thead>
   <tbody>
     <% @books.each do |book|%>
@@ -19,6 +20,8 @@
         <td align="right">
           <%= link_to t(:edit), edit_admin_book_path(book),
             class: "btn btn-primary" %>
+          <%= link_to t(:delete), [:admin, book], method: :delete,
+            class: "btn btn-danger", data: {confirm: t(:confirm_message)} %>
         </td>
       </tr>
     <% end %>
