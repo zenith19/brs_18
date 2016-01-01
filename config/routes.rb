@@ -5,9 +5,10 @@ Rails.application.routes.draw do
     get "home" => "static_pages#home"
     get "about" => "static_pages#about"
     get "contact" => "static_pages#contact"
+
     namespace :admin do
-      root "books#new"
-      resources :categories, only: [:new, :create]
+      root "books#index"
+      resources :categories
       resources :books, only: [:new, :create, :edit, :update]
     end
 
