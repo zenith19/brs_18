@@ -1,0 +1,14 @@
+<h1><%= t "book_information" %></h1>
+
+<div class="row">
+  <div class="col-md-5">
+    <p><b><%= t "title" %>:</b> <b><%= @book.title %></b></p>
+    <p><%= t "author" %>: <%= @book.author %></p>
+    <p><%= t "publish_date" %>: <%= @book.publish_date %></p>
+    <p><%= t "page" %>: <%= @book.page %></p>
+    <p><%= t "category" %>: <%= @book.category.name %></p>
+    <p>
+      <%= render "book_photo" %>
+    </p>
+  </div>
+</div>

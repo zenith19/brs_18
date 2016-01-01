@@ -1,0 +1,3 @@
+<% @book.book_photos.each do |book_photo| %>
+  <%= image_tag book_photo.image_url(:medium) %> <br><br>
+<% end %>
