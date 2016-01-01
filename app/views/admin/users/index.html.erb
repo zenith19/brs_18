@@ -1,22 +1,20 @@
-<div class="container">
-  <h2 class="bg-primary"><%= t :all_users %></h2>
-  <div>
-    <table class="table">
+<h1><%= t :all_users %></h1>
+  <table class="table">
+    <tr>
+      <th><%= t :name %></th>
+      <th><%= t :email %></th>
+      <th><%= t :action %></th>
+    </tr>
+    <% @users.each do |user| %>
       <tr>
-        <th><%= t :name %></th>
-        <th><%= t :email %></th>
-          <th><%= t :action %></th>
+        <td><%= link_to user.name, "#" %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to t(:edit), edit_user_registration_path, class: "btn btn-primary btn-xs" %>
+        <%= link_to t(:delete), admin_user_path(user), method: :delete,
+          class: "btn btn-danger btn-xs", data: {confirm: t(:confirm_message_delete)} %></td>
       </tr>
-      <% @users.each do |user| %>
-        <tr>
-          <td><%= link_to user.name, "#" %></td>
-          <td><%= user.email %></td>
-            <td><%= link_to t(:edit), "#", class: "btn btn-primary btn-xs" %>
-        </tr>
-      <% end %>
-    </table>
-  </div>
-</div>
+    <% end %>
+  </table>
 
 <%= paginate @users %>
 <%= page_entries_info @users %>

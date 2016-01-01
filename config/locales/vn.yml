@@ -41,4 +41,6 @@ vn:
   edit_user: "Chỉnh sửa"
   delete_user: "Xóa bỏ"
   confirm_message_delete: "Bạn có chắc chắn muốn xóa"
+  delete_success_message: "dùng đã bị xóa"
+  user_removal_failure: "Người dùng không bị xóa"
 
