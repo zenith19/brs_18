@@ -1,13 +1,12 @@
 namespace :user do
   desc "Create a random User"
   task create: :environment do
-    process_user_task Faker::Name.name, Faker::Internet.email, "1234", false
-  end
-
-  namespace :create do
-    desc "Create a User"
-    task :specify, [:name, :email, :password] => :environment do |t, args|
-      process_user_task args[:name], args[:email], args[:password], false
+    begin
+      obj = FactoryGirl.create :user
+      print "An user has been created!"
+      obj.attributes.each {|_name, value| puts "#{_name}: #{value}"}
+    rescue => exception
+      _dump_errors exception
     end
   end
 end
