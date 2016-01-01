@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     namespace :admin do
       root "books#index"
       resources :categories
-      resources :books, only: [:new, :create, :edit, :update]
       resources :users, only:[:index, :destroy]
+      resources :books
     end
 
     devise_for :users, controllers: {registrations: "registrations"}

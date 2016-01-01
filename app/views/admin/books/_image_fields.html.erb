@@ -1,8 +1,8 @@
 <%= image_form.link_to_remove t(:remove_option) %>
 <div class="row">
   <div class="col-lg-6">
-    <%= image_form.file_field :image, class: "form-control" %>
     <%= image_form.hidden_field :image_cache %>
+    <%= image_form.file_field :image, class: "form-control" %>
     <p>
       <%= image_form.label :remote_image_url, t(:add_url) %><br />
       <%= image_form.text_field :remote_image_url, class: "form-control" %>
