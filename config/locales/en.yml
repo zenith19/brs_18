@@ -13,27 +13,31 @@ en:
   admin:
     requests:
       index:
-        all_request: "All Requests"
-        book_author: "Author"
-        book_title: "Book Title"
-        link: "Link"
-        publisher: "Publisher"
-        status: "Status"
-        user_name: "User Name"
+        all_request: All Requests
+        book_author: Author
+        book_title: Book Title
+        link: Link
+        publisher: Publisher
+        status: Status
+        user_name: User Name
       requests:
-        approve_button: "Approve"
-        cancel_button: "Cancel"
-  all_categories: "All categories"
-  all_users: "All users"
-  author: "Author"
-  book_added_text: "Book Added"
-  book_delete_message: "Book Deleted"
-  book_updated_text: "Book updated Successfully"
-  category: "Category"
-  category_delete_message: "Category deleted"
-  confirm_message: "You sure?"
-  confirm_message_delete: "Are you sure to delete"
-  contact: "Contact"
+        approved_button: Approved
+        cancel_button: Cancel
+        change_status: Change Status
+        not_approved_button: Not Approved
+      update:
+        flash_request_update: Request Updated
+  all_categories: All categories
+  all_users: All users
+  author: Author
+  book_added_text: Book Added
+  book_delete_message: Book Deleted
+  book_updated_text: Book updated Successfully
+  category: Category
+  category_delete_message: Category deleted
+  confirm_message: You sure?
+  confirm_message_delete: Are you sure to delete
+  contact: Contact
   date:
     formats:
       short: '%d-%m-%Y'
@@ -61,6 +65,24 @@ en:
   publish_date: "Publish Date"
   remove_option: "Remove image"
   request: "Request"
+  delete_success_message: User deleted
+  delete_user: Delete
+  dev_by: Developed by
+  edit_category_text: Edit Category
+  edit_user: Edit
+  email: Email
+  form_contains: The form contains
+  hello: Hello world
+  home: Home
+  log_in: Log in
+  log_out: Log out
+  name: Name
+  new_category: New Category
+  page: Page
+  profile: Profile
+  publish_date: Publish Date
+  remove_option: Remove image
+  request: Request
   requests:
     create:
       flash_request_success: "Request Successfully Created"
@@ -113,3 +135,15 @@ en:
   welcome_message: "Welcome to"
   image_size_notification: "Image size shoule be less then 3MB"
   user_profile: "User profile"
+      flash_request_update: Request Successfully Updated
+  save_change_text: Save changes
+  sign_up_now: Sign up now!
+  system_name: Framgia Book Review System
+  title: Title
+  update_book: Update book
+  update_category_sucessful_message: Category updated
+  user_removal_failure: User not deleted
+  users: Users
+  view_all: View all
+  view_all_request: View All Requests
+  welcome_message: Welcome to

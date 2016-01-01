@@ -7,30 +7,34 @@ vn:
   admin:
     requests:
       index:
-        all_request: "Tất cả các yêu cầu"
-        book_author: "tác giả"
-        book_title: "Tiêu đề"
-        link: "liên kết"
-        publisher: "Nhà phát hành"
-        status: "Tình trạng"
-        user_name: "tên người dùng"
+        all_request: Tất cả các yêu cầu
+        book_author: tác giả
+        book_title: Tiêu đề
+        link: liên kết
+        publisher: Nhà phát hành
+        status: Tình trạng
+        user_name: tên người dùng
       requests:
-        approve_button: "Phê duyệt"
-        cancel_button: "hủy bỏ"
-  all_users: "Tất cả người dùng"
-  confirm_message_delete: "Bạn có chắc chắn muốn xóa"
-  contact: "Liên Hệ"
-  delete_success_message: "dùng đã bị xóa"
-  delete_user: "Xóa bỏ"
-  dev_by: "Được phát triển bởi"
-  edit_user: "Chỉnh sửa"
-  email: "E-mail"
-  home: "Nhà"
-  log_in: "Đăng nhập"
-  log_out: "Đăng xuất"
-  name: "Tên"
-  profile: "Hồ sơ"
-  request: "yêu cầu"
+        approved_button: phê duyệt
+        cancel_button: hủy bỏ
+        change_status: Change Status
+        not_approved_button: không chấp thuận
+      update:
+        flash_request_update: Yêu cầu cập nhật
+  all_users: Tất cả người dùng
+  confirm_message_delete: Bạn có chắc chắn muốn xóa
+  contact: Liên Hệ
+  delete_success_message: dùng đã bị xóa
+  delete_user: Xóa bỏ
+  dev_by: Được phát triển bởi
+  edit_user: Chỉnh sửa
+  email: E-mail
+  home: Nhà
+  log_in: Đăng nhập
+  log_out: Đăng xuất
+  name: Tên
+  profile: Hồ sơ
+  request: yêu cầu
   requests:
     create:
       flash_request_success: "Yêu cầu tạo thành công"

@@ -5,5 +5,5 @@ class Request < ActiveRecord::Base
   validates_presence_of :author
   validates_presence_of :publisher
   validates_presence_of :link
-  enum status: [:pending, :cancel]
+  enum status: [:pending, :cancel, :approved, :not_approved]
 end
