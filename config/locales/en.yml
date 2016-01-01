@@ -69,3 +69,5 @@ en:
   edit_user: "Edit"
   delete_user: "Delete"
   confirm_message_delete: "Are you sure to delete"
+  delete_success_message: "User deleted"
+  user_removal_failure: "User not deleted"

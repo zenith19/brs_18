@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       root "books#index"
       resources :categories
       resources :books, only: [:new, :create, :edit, :update]
-      resources :users, only:[:index]
+      resources :users, only:[:index, :destroy]
     end
 
     devise_for :users, controllers: {registrations: "registrations"}
