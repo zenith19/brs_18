@@ -7,6 +7,7 @@ class Ability
       can :manage, :all
     else
       can :read, :all
+      can [:edit, :update], User, id: user.id
       can :create, Request
       can :update, Request do |request|
         request.try(:user) == user
