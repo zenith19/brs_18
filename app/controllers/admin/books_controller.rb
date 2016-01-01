@@ -2,13 +2,17 @@ class Admin::BooksController < ApplicationController
   load_and_authorize_resource
   before_action :load_categories, only: [:new, :edit]
 
+  def index
+    @books = @books.page(params[:page]).per 10
+  end
+
   def new
   end
 
   def create
     if @book.save
       flash[:success] = t "book_added_text"
-      redirect_to request.referrer
+      redirect_to admin_books_path
     else
       render :new
     end

@@ -49,6 +49,10 @@ en:
   confirm_message: "You sure?"
   update_book: "Update book"
   book_updated_text: "Book updated Successfully"
+  title: "Title"
+  author: "Author"
+  publish_date: "Publish Date"
+  page: "Page"
   date:
     order:
       - :day
