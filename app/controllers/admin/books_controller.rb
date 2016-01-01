@@ -3,7 +3,7 @@ class Admin::BooksController < ApplicationController
   before_action :load_categories, only: [:new, :edit]
 
   def index
-    @books = @books.page(params[:page]).per 10
+    @books = @books.latest.page(params[:page]).per 10
   end
 
   def new
@@ -28,6 +28,12 @@ class Admin::BooksController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @book.destroy
+    flash[:success] = t "book_delete_message"
+    redirect_to admin_books_path
   end
 
   private

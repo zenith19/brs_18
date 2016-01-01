@@ -13,6 +13,7 @@ en:
   all_categories: All categories
   all_users: All users
   book_added_text: Book Added
+  book_delete_message: Book Deleted
   book_updated_text: Book updated Successfully
   category: Category
   category_delete_message: Category deleted
@@ -21,7 +22,7 @@ en:
   contact: Contact
   date:
     formats:
-      short: '%d-%m-%Y'
+      short: "%d-%m-%Y"
     order:
     - :day
     - :month
