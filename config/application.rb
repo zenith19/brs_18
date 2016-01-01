@@ -1,6 +1,6 @@
-require File.expand_path('../boot', __FILE__)
+require File.expand_path("../boot", __FILE__)
 
-require 'rails/all'
+require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -22,6 +22,10 @@ module Brs18
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = [:en, :vn]
     config.i18n.default_locale = :en
+
+    config.generators do |g|
+      g.factory_girl dir: "factories"
+    end
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true

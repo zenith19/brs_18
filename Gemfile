@@ -24,6 +24,7 @@ gem "sdoc",                    "0.4.0", group: :doc
 gem "devise"
 gem "devise-i18n"
 gem "devise-i18n-views"
+gem "factory_girl_rails"
 group :development, :test do
   gem "pry"
   gem "web-console", "2.0.0.beta3"
