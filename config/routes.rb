@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     get "home" => "static_pages#home"
     get "about" => "static_pages#about"
     get "contact" => "static_pages#contact"
-
     namespace :admin do
       root "books#new"
       resources :categories, only: [:new, :create]
@@ -13,6 +12,6 @@ Rails.application.routes.draw do
     end
 
     devise_for :users, controllers: {registrations: "registrations"}
-    resources :requests, only: [:new, :create]
+    resources :requests, only: [:index, :new, :create]
   end
 end
