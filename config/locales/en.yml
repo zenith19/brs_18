@@ -10,8 +10,22 @@ en:
   add_new: Add new
   add_request: Add a Request
   add_url: or image URL
+  admin:
+    requests:
+      index:
+        all_request: All Requests
+        book_author: Author
+        book_title: Book Title
+        link: Link
+        publisher: Publisher
+        status: Status
+        user_name: User Name
+      requests:
+        approve_button: Approve
+        cancel_button: Cancel
   all_categories: All categories
   all_users: All users
+  author: Author
   book_added_text: Book Added
   book_delete_message: Book Deleted
   book_updated_text: Book updated Successfully
@@ -22,11 +36,12 @@ en:
   contact: Contact
   date:
     formats:
-      short: "%d-%m-%Y"
+      short: '%d-%m-%Y'
     order:
     - :day
     - :month
     - :year
+  delete_success_message: User deleted
   delete_user: Delete
   dev_by: Developed by
   edit_category_text: Edit Category
@@ -39,7 +54,9 @@ en:
   log_out: Log out
   name: Name
   new_category: New Category
+  page: Page
   profile: Profile
+  publish_date: Publish Date
   remove_option: Remove image
   request: Request
   requests:
@@ -62,24 +79,11 @@ en:
   save_change_text: Save changes
   sign_up_now: Sign up now!
   system_name: Framgia Book Review System
+  title: Title
   update_book: Update book
   update_category_sucessful_message: Category updated
+  user_removal_failure: User not deleted
   users: Users
   view_all: View all
   view_all_request: View All Requests
   welcome_message: Welcome to
-
-  title: "Title"
-  author: "Author"
-  publish_date: "Publish Date"
-  page: "Page"
-  users: "Users"
-  all_users: "All users"
-  name: "Name"
-  email: "Email"
-  action: "Action"
-  edit_user: "Edit"
-  delete_user: "Delete"
-  confirm_message_delete: "Are you sure to delete"
-  delete_success_message: "User deleted"
-  user_removal_failure: "User not deleted"
