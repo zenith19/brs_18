@@ -1,9 +1,14 @@
-<tr>
-  <% @requests.each do |request| %>
+<% @requests.each do |request| %>
+  <tr>
     <td><%= request.title %></td>
     <td><%= request.author %></td>
     <td><%= request.publisher %></td>
     <td><%= request.link %></td>
     <td><%= request.status %></td>
-  <% end %>
-</tr>
+    <td>
+      <%= link_to t(".cancel_button"), request_path(request, 
+      	"request[status]": request.status), method: :put, data:{confirm: 
+      	I18n.t("confirm_message")}, class: "btn btn-danger"  %>
+    </td>
+  </tr>
+<% end %>

@@ -1,12 +1,25 @@
 vn:
   about: Trong khoảng
   access_denied: truy cập bị từ chối
+  account: tài khoản
+  action: hoạt động
   add_request: Thêm một yêu cầu
+  all_users: Tất cả người dùng
+  confirm_message_delete: Bạn có chắc chắn muốn xóa
   contact: Liên Hệ
+  delete_user: Xóa bỏ
   dev_by: Được phát triển bởi
+  edit_user: Chỉnh sửa
+  email: E-mail
   home: Nhà
+  log_in: Đăng nhập
+  log_out: Đăng xuất
+  name: Tên
+  profile: Hồ sơ
   request: yêu cầu
   requests:
+    create:
+      flash_request_success: Yêu cầu tạo thành công
     index:
       all_request: Các yêu cầu của tôi
       book_author: Tên tác giả
@@ -17,22 +30,13 @@ vn:
     new:
       flash_request_success: Yêu cầu tạo thành công
       sent_request: Đã gửi yêu cầu
+    requests:
+      cancel_button: hủy bỏ
   sign_up_now: Đăng ký ngay!
   system_name: Framgia Book Review System
+  users: người sử dụng
   view_all_request: Xem Tất cả Yêu cầu
   welcome_message: Chào mừng đến
-  welcome_message: "Chào mừng đến"
-  system_name: "Framgia Book Review System"
-  about: "Trong khoảng"
-  contact: "Liên Hệ"
-  home: "Nhà"
-  dev_by: "Được phát triển bởi"
-  sign_up_now: "Đăng ký ngay!"
-  account: "tài khoản"
-  profile: "Hồ sơ"
-  log_in: "Đăng nhập"
-  log_out: "Đăng xuất"
-  about: "Trong khoảng"
   users: "người sử dụng"
   all_users: "Tất cả người dùng"
   name: "Tên"
@@ -43,4 +47,3 @@ vn:
   confirm_message_delete: "Bạn có chắc chắn muốn xóa"
   delete_success_message: "dùng đã bị xóa"
   user_removal_failure: "Người dùng không bị xóa"
-

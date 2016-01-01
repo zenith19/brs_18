@@ -1,4 +1,5 @@
 class RequestsController < ApplicationController
+  before_action :authenticate_user!
   load_and_authorize_resource
 
   def index
@@ -12,15 +13,20 @@ class RequestsController < ApplicationController
     @request.user = current_user
     if @request.save
       flash[:success] = t ".flash_request_success"
-      redirect_to root_path
+      redirect_to requests_path
     else
-      flash[:success] = t ".flash_request_success"
       render :new
     end
   end
 
+  def update
+    @request.cancel!
+    flash[:success] = t ".flash_request_update"
+    redirect_to requests_path
+  end
+
   private
   def request_params
-    params.require(:request).permit :title, :author, :pulisher, :link
+    params.require(:request).permit :title, :author, :publisher, :link
   end
 end
