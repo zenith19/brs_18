@@ -1,13 +1,49 @@
 en:
   about: About
   access_denied: Access Denied
+  account: Account
+  action: Action
+  add_book_text: Add a book
+  add_category_sucessful_message: Category added
+  add_category_text: Add Category
+  add_image: Add image
+  add_new: Add new
   add_request: Add a Request
+  add_url: or image URL
+  all_categories: All categories
+  all_users: All users
+  book_added_text: Book Added
+  book_updated_text: Book updated Successfully
+  category: Category
+  category_delete_message: Category deleted
+  confirm_message: You sure?
+  confirm_message_delete: Are you sure to delete
   contact: Contact
+  date:
+    formats:
+      short: '%d-%m-%Y'
+    order:
+    - :day
+    - :month
+    - :year
+  delete_user: Delete
   dev_by: Developed by
+  edit_category_text: Edit Category
+  edit_user: Edit
+  email: Email
+  form_contains: The form contains
   hello: Hello world
   home: Home
+  log_in: Log in
+  log_out: Log out
+  name: Name
+  new_category: New Category
+  profile: Profile
+  remove_option: Remove image
   request: Request
   requests:
+    create:
+      flash_request_success: Request Successfully Created
     index:
       all_request: My Requests
       book_author: Author Name
@@ -18,53 +54,24 @@ en:
     new:
       flash_request_success: Request Successfully Created
       sent_request: Send Request
+    requests:
+      cancel_button: Cancel
+    update:
+      flash_request_update: Request Successfully Updated
+  save_change_text: Save changes
   sign_up_now: Sign up now!
   system_name: Framgia Book Review System
+  update_book: Update book
+  update_category_sucessful_message: Category updated
+  users: Users
+  view_all: View all
   view_all_request: View All Requests
   welcome_message: Welcome to
-  welcome_message: "Welcome to"
-  system_name: "Framgia Book Review System"
-  about: "About"
-  contact: "Contact"
-  home: "Home"
-  dev_by: "Developed by"
-  sign_up_now: "Sign up now!"
-  add_book_text: "Add a book"
-  add_image: "Add image"
-  remove_option: "Remove image"
-  add_url: "or image URL"
-  book_added_text: "Book Added"
-  form_contains: "The form contains"
-  add_new: "Add new"
-  view_all: "View all"
-  category: "Category"
-  new_category: "New Category"
-  add_category_text: "Add Category"
-  add_category_sucessful_message: "Category added"
-  save_change_text: "Save changes"
-  edit_category_text: "Edit Category"
-  update_category_sucessful_message: "Category updated"
-  category_delete_message: "Category deleted"
-  all_categories: "All categories"
-  confirm_message: "You sure?"
-  update_book: "Update book"
-  book_updated_text: "Book updated Successfully"
+
   title: "Title"
   author: "Author"
   publish_date: "Publish Date"
   page: "Page"
-  date:
-    order:
-      - :day
-      - :month
-      - :year
-    formats:
-      short: "%d-%m-%Y"
-  account: "Account"
-  profile: "Profile"
-  log_in: "Log in"
-  log_out: "Log out"
-  about: "About"
   users: "Users"
   all_users: "All users"
   name: "Name"
