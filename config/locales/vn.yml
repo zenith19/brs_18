@@ -34,3 +34,11 @@ vn:
   log_out: "Đăng xuất"
   about: "Trong khoảng"
   users: "người sử dụng"
+  all_users: "Tất cả người dùng"
+  name: "Tên"
+  email: "E-mail"
+  action: "hoạt động"
+  edit_user: "Chỉnh sửa"
+  delete_user: "Xóa bỏ"
+  confirm_message_delete: "Bạn có chắc chắn muốn xóa"
+

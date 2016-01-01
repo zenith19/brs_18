@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       root "books#new"
       resources :categories, only: [:new, :create]
       resources :books, only: [:new, :create, :edit, :update]
+      resources :users, only:[:index]
     end
 
     devise_for :users, controllers: {registrations: "registrations"}
