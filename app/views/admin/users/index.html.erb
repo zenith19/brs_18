@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="bg-primary"><%= t :all_users %></h2>
+  <div>
+    <table class="table">
+      <tr>
+        <th><%= t :name %></th>
+        <th><%= t :email %></th>
+          <th><%= t :action %></th>
+      </tr>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= link_to user.name, "#" %></td>
+          <td><%= user.email %></td>
+            <td><%= link_to t(:edit), "#", class: "btn btn-primary btn-xs" %>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<%= paginate @users %>
+<%= page_entries_info @users %>
