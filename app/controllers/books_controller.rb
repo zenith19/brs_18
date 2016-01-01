@@ -8,5 +8,6 @@ class BooksController < ApplicationController
   end
 
   def show
+    @review = @book.reviews.build
   end
 end

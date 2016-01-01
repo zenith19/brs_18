@@ -116,3 +116,7 @@ en:
   welcome_message: "Welcome to"
   image_size_notification: "Image size shoule be less then 3MB"
   user_profile: "User profile"
+  add_review: "Add Review"
+  add_review_sucessful_message: "Review added"
+  add_review_fail_message: "Review not added"
+
