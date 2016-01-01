@@ -2,7 +2,7 @@ class Admin::CategoriesController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @categories = Category.page(params[:page]).per 10
+    @categories = @categories.page(params[:page]).per 10
   end
 
   def new
