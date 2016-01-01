@@ -1,7 +1,7 @@
 <h1><%= t "book_information" %></h1>
 
 <div class="row">
-  <div class="col-md-5">
+  <div class="col-md-4">
     <p><b><%= t "title" %>:</b> <b><%= @book.title %></b></p>
     <p><%= t "author" %>: <%= @book.author %></p>
     <p><%= t "publish_date" %>: <%= @book.publish_date %></p>
@@ -12,9 +12,12 @@
     </p>
   </div>
 
-  <div class="col-md-7">
+  <div class="col-md-8">
     <div id="review_form">
-      <%= render "reviews/form" %>
+      <%= render "reviews/form" unless @reviews.detect{|review| review.user_id == current_user.id} %>
+    </div>
+    <div id="reviews">
+      <%= render @reviews %>
     </div>
   </div>
 </div>

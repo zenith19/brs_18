@@ -9,5 +9,6 @@ class BooksController < ApplicationController
 
   def show
     @review = @book.reviews.build
+    @reviews = @book.reviews.latest
   end
 end
