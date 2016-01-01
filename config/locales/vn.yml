@@ -14,9 +14,12 @@ vn:
         publisher: Nhà phát hành
         status: Tình trạng
         user_name: tên người dùng
+      destroy:
+        flash_request_deleted: Yêu cầu xóa
       requests:
         approve_button: Phê duyệt
         cancel_button: hủy bỏ
+        delete_button: Delete
   all_users: Tất cả người dùng
   confirm_message_delete: Bạn có chắc chắn muốn xóa
   contact: Liên Hệ

@@ -7,8 +7,9 @@
     <td><%= request.link %></td>
     <td><%= request.status %></td>
     <td align="right">
-      <%= link_to t(".approve_button"), "#", class: "btn btn-primary" %>
-      <%= link_to t(".cancel_button"), "#",class: "btn btn-danger" %>
+      <%= link_to t(".delete_button"), admin_request_path(request), 
+        class: "btn btn-danger",method: :delete, data: 
+        {confirm: t("confirm_message")} %>
     </td>
   </tr>
 <% end %>

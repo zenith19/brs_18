@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       resources :categories
       resources :users, only:[:index, :destroy]
       resources :books
-      resources :requests, only: [:index]
+      resources :requests, only: [:index, :destroy]
     end
 
     resources :users, only: :index

@@ -20,9 +20,12 @@ en:
         publisher: Publisher
         status: Status
         user_name: User Name
+      destroy:
+        flash_request_deleted: Request Deleted
       requests:
         approve_button: Approve
         cancel_button: Cancel
+        delete_button: Delete
   all_categories: All categories
   all_users: All users
   author: Author
@@ -47,8 +50,6 @@ en:
   edit_category_text: Edit Category
   edit_user: Edit
   email: Email
-  dev_by: Developed by
-  edit_category_text: Edit Category
   form_contains: The form contains
   hello: Hello world
   home: Home
@@ -89,17 +90,3 @@ en:
   view_all: View all
   view_all_request: View All Requests
   welcome_message: Welcome to
-  title: "Title"
-  author: "Author"
-  publish_date: "Publish Date"
-  page: "Page"
-  users: "Users"
-  all_users: "All users"
-  name: "Name"
-  email: "Email"
-  action: "Action"
-  edit_user: "Edit"
-  delete_user: "Delete"
-  confirm_message_delete: "Are you sure to delete"
-  delete_success_message: "User deleted"
-  user_removal_failure: "User not deleted"
