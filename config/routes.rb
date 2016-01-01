@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :categories
       resources :users, only:[:index, :destroy]
       resources :books
+      resources :requests, only: [:index]
     end
 
     devise_for :users, controllers: {registrations: "registrations"}

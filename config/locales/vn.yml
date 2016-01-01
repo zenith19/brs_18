@@ -4,9 +4,23 @@ vn:
   account: tài khoản
   action: hoạt động
   add_request: Thêm một yêu cầu
+  admin:
+    requests:
+      index:
+        all_request: Tất cả các yêu cầu
+        book_author: tác giả
+        book_title: Tiêu đề
+        link: liên kết
+        publisher: Nhà phát hành
+        status: Tình trạng
+        user_name: tên người dùng
+      requests:
+        approve_button: Phê duyệt
+        cancel_button: hủy bỏ
   all_users: Tất cả người dùng
   confirm_message_delete: Bạn có chắc chắn muốn xóa
   contact: Liên Hệ
+  delete_success_message: dùng đã bị xóa
   delete_user: Xóa bỏ
   dev_by: Được phát triển bởi
   edit_user: Chỉnh sửa
@@ -34,16 +48,7 @@ vn:
       cancel_button: hủy bỏ
   sign_up_now: Đăng ký ngay!
   system_name: Framgia Book Review System
+  user_removal_failure: Người dùng không bị xóa
   users: người sử dụng
   view_all_request: Xem Tất cả Yêu cầu
   welcome_message: Chào mừng đến
-  users: "người sử dụng"
-  all_users: "Tất cả người dùng"
-  name: "Tên"
-  email: "E-mail"
-  action: "hoạt động"
-  edit_user: "Chỉnh sửa"
-  delete_user: "Xóa bỏ"
-  confirm_message_delete: "Bạn có chắc chắn muốn xóa"
-  delete_success_message: "dùng đã bị xóa"
-  user_removal_failure: "Người dùng không bị xóa"
