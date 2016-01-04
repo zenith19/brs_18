@@ -5,6 +5,9 @@ class UsersController < ApplicationController
   def index
     @users = @users.page(params[:page]).per 10
   end
+
+  def show
+  end
     
   def edit
   end
