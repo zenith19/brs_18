@@ -107,6 +107,8 @@ en:
   user_removal_failure: "User not deleted"
   user_update_notice: "User not updated"
   view_all: "View all"
+  title_contains: "Title contains"
+  search: "Search"
   view_all_request: "View All Requests"
   welcome_message: "Welcome to"
   image_size_notification: "Image size shoule be less then 3MB"
