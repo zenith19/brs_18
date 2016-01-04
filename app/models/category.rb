@@ -1,4 +1,6 @@
 class Category < ActiveRecord::Base
+  include ImageValidation
+  
   has_many :books
 
   validates :name,
@@ -7,4 +9,6 @@ class Category < ActiveRecord::Base
     uniqueness: {case_sensitive: false}
 
   mount_uploader :picture, ImageUploader
+
+  validate :picture_size
 end

@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  include ImageValidation
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -23,4 +24,7 @@ class User < ActiveRecord::Base
   has_many :followers,
             through: :passive_relationships,
             source: :follower
+
+  mount_uploader :picture, ImageUploader
+  validate :picture_size
 end
