@@ -65,4 +65,4 @@ vn:
   update_success_message: "Người sử dụng cập nhật thành công"
   image_size_notification: "Kích thước hình ảnh nên được ít hơn 3MB"
   user_update_notice: "Người dùng không được cập nhật"
-  
+  user_profile: "Thông tin người dùng"

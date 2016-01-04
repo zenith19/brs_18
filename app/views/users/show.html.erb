@@ -1,0 +1,9 @@
+<h1><%= t :user_profile %></h1>
+
+<div class="row">
+  <div class="col-md-5">
+    <p><%= render "user_picture" %></p>
+    <p><b><%= t :name %>: <%= @user.name %></b></p>
+    <p><%= t :email %>: <%= @user.email %></p>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  devise_for :users, controllers: {registrations: "registrations"}
   scope "(:locale)", locale: /en|vn/ do
     root "static_pages#home"
     get "home" => "static_pages#home"
@@ -14,8 +14,7 @@ Rails.application.routes.draw do
       resources :requests, only: [:index]
     end
 
-    resources :users, only: [:index,:edit, :update] 
-    devise_for :users, controllers: {registrations: "registrations"}
+    resources :users, only: [:index, :show, :edit, :update]
     resources :requests, only: [:index, :new, :create, :update]
     resources :books, only: [:index, :show]
   end
