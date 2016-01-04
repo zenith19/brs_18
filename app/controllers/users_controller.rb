@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user_books = UserBook.by_user(current_user.id).page(params[:page]).per 10
+    @user_activities = User.review_activities current_user
   end
     
   def edit
