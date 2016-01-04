@@ -12,6 +12,7 @@ class Ability
       can :update, Request do |request|
         request.try(:user) == user
       end
+      can :create, Review
     end
   end
 end
