@@ -14,9 +14,12 @@ vn:
         publisher: "Nhà phát hành"
         status: "Tình trạng"
         user_name: "tên người dùng"
+      update:
+        flash_request_update: "Yêu cầu cập nhật"
       requests:
         approve_button: "Phê duyệt"
         cancel_button: "hủy bỏ"
+        change_status: "Thay đổi trạng thái"
   all_users: "Tất cả người dùng"
   confirm_message_delete: "Bạn có chắc chắn muốn xóa"
   contact: "Liên Hệ"

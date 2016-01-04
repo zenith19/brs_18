@@ -20,9 +20,12 @@ en:
         publisher: "Publisher"
         status: "Status"
         user_name: "User Name"
+      update:
+        flash_request_update: "Request Updated"
       requests:
         approve_button: "Approve"
         cancel_button: "Cancel"
+        change_status: "Change Status"
   all_categories: "All categories"
   all_users: "All users"
   author: "Author"
