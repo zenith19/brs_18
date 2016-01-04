@@ -6,9 +6,11 @@
     <td><%= request.publisher %></td>
     <td><%= request.link %></td>
     <td><%= request.status %></td>
-    <td align="right">
-      <%= link_to t(".approve_button"), "#", class: "btn btn-primary" %>
-      <%= link_to t(".cancel_button"), "#",class: "btn btn-danger" %>
+    <td align="right", id="drop_down">
+      <%= form_for [:admin, request] do |f| %>
+        <td><%= f.select :status, collection: @statuses %></td>
+        <td><%= f.submit t(".change_status"), class: "btn btn-success" %></td>
+      <% end %>
     </td>
   </tr>
 <% end %>
