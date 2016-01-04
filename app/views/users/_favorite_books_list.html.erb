@@ -1,0 +1,24 @@
+<br>
+<table class="table">
+  <h3><%= t :favorite_books_list %></h3>
+  <thead>
+    <th><%= t :title %></th>
+    <th><%= t :author %></th>
+    <th><%= t :category %></th>
+    <th><%= t :publish_date %></th>
+    <th><%= t :page %></th>
+  </thead>
+  <tbody>
+    <% @books.each do |book|%>
+      <tr>
+        <td><%= link_to book.title, book %></td>
+        <td><%= book.author %></td>
+        <td><%= book.category.name %></td>
+        <td><%= l book.publish_date, format: :short %></td>
+        <td><%= book.page %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @books, param_name: "fbook_page" %>
+<%= page_entries_info @books, param_name: "fbook_page" %>

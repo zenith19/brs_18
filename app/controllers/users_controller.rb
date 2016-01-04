@@ -7,21 +7,22 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user_books = UserBook.by_user(current_user.id).page(params[:page]).per 10
+    @user_books = UserBook.by_user(current_user.id).page(params[:page]).per 5
+    @books = Book.favourite(current_user.id).page(params[:fbook_page]).per 5
     @user_activities = User.review_activities current_user
   end
-    
+
   def edit
   end
 
   def update
     if @user.update user_params
-      flash[:success] = t "update_success_message"
+      flash[:success] = t :update_success_message
       redirect_to root_path # will change later
     else
-      flash[:notice] = t "user_update_notice"
+      flash[:notice] = t :user_update_notice
       render :edit
-    end   
+    end
   end
 
   private
