@@ -14,6 +14,26 @@ class Book < ActiveRecord::Base
     reject_if: proc {|attributes| attributes[:image].blank?}
 
   scope :latest, -> {order "created_at DESC"}
-  scope :favourite, -> user_id{joins(:user_books).where user_books: 
-    {user_id: user_id, favourite: true}}
+  scope :favourite, -> user_id{joins(:user_books)
+    .where user_books: {user_id: user_id, favourite: true}}
+  scope :not_favourite, -> user_id{where.not id: [(favourite user_id).ids]}
+  
+  scope :filter_book, ->(criteria) do
+    search = criteria.split
+    case search[0]
+    when "all"
+      Book.all
+    when "unfavourite"
+      not_favourite search[1].to_i
+    else
+      favourite search[1].to_i
+    end
+  end
+
+  private
+  class << self
+    def ransackable_scopes auth_object = nil
+      [:filter_book]
+    end
+  end
 end

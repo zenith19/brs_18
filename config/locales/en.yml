@@ -129,3 +129,6 @@ en:
   followers: "Followers"
   unfollow: "Unfollow"
   ago: "ago"
+  favourite: "Favourite"
+  not_favourite: "Not Favourite"
+  all: "All"
