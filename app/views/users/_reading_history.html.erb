@@ -1,0 +1,17 @@
+<h3><%= t :reading_history %></h3>
+<table class="table">
+  <thead>
+    <th><%= t :book_title %></th>
+    <th><%= t :status %></th>
+  </thead>
+  <tbody>
+    <% @user_books.each do |user_book|%>
+      <tr>
+        <td><%= user_book.book.title %></td>
+        <td><%= user_book.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @user_books %>
+<%= page_entries_info @user_books %>
