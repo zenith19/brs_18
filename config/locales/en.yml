@@ -119,4 +119,5 @@ en:
   add_review: "Add Review"
   add_review_sucessful_message: "Review added"
   add_review_fail_message: "Review not added"
-
+  reading_history: "Reading History"
+  book_title: "Book Title"
