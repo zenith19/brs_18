@@ -4,6 +4,8 @@ class Comment < ActiveRecord::Base
 
   validates :content, presence: true
 
+  scope :latest, ->{order updated_at: :desc}
+
   include PublicActivity::Model
   tracked except: [:destroy, :update],
     owner: ->(controller, model) {controller && controller.current_user}

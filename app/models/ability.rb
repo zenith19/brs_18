@@ -12,7 +12,7 @@ class Ability
       can :update, Request do |request|
         request.try(:user) == user
       end
-      can :destroy, Review, user_id: user.id
+      can :destroy, [Review, Comment], user_id: user.id
     end
   end
 end

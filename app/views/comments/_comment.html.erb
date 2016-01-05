@@ -1,0 +1,16 @@
+<ol class="entries" id="comments-<%= comment.id %>">
+  <li>
+    <%= image_tag comment.user.picture_url :small if comment.user.picture? %>
+    <span class="user"><%= link_to comment.user.name, comment.user %></span>
+    <span class="timestamp">
+      <%= t "commented" %> <%= time_ago_in_words(comment.created_at) %> <%= t "ago" %>.
+      <% if can?(:destroy, comment) %>
+        <%= link_to t(:delete), comment, remote: true, method: :delete,
+          data: {confirm: t(:confirm_message)} %>
+      <% end %>
+    </span>
+    <span class="content">
+      <%= comment.content %>
+    </span>
+  </li>
+</ol>

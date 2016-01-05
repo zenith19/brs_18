@@ -1,5 +1,6 @@
 <% if @comment.errors.any? %>
   $("#comments-review-form-<%= @comment.review.id %>").prepend("<%= j render("shared/error_messages", object: @comment) %>");
 <% else %>
+  $("#comments-review-<%= @comment.review.id %>").prepend("<%= j render (@comment) %>");
   $(".comment_box").val("");
 <% end %>
