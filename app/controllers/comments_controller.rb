@@ -9,6 +9,13 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment.destroy
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
   def comment_params
     params.require(:comment).permit :content, :review_id

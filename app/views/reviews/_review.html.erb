@@ -1,6 +1,6 @@
 <ol class="entries">
   <li id="review_<%= review.id %>">
-    <%= image_tag review.user.picture_url :thumb %>
+    <%= image_tag review.user.picture_url :thumb  if review.user.picture? %>
     <span class="user"><%= link_to review.user.name, review.user %></span>
     <span class="timestamp">
       <%= t "reviewed" %> <%= time_ago_in_words(review.created_at) %> <%= t "ago" %>.
@@ -16,6 +16,9 @@
     <div id="comments_of_review_<%= review.id %>" class="row">
       <span class="content">
         <b><%= t "comments" %></b>
+        <div id="comments-review-<%= review.id %>">
+          <%= render review.comments.latest %>
+        </div>
         <div id="comments-review-form-<%= review.id %>">
           <%= render "comments/form", review: review %>
         </div>
