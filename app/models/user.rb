@@ -28,6 +28,23 @@ class User < ActiveRecord::Base
   mount_uploader :picture, ImageUploader
   validate :picture_size
 
-  scope :review_activities, ->(user){PublicActivity::Activity.order(created_at: :desc).
-    where "trackable_type = ? AND owner_id = ?","Review", user.id}
+  def follow other_user
+    active_relationships.create followed_id: other_user.id
+  end
+
+  def unfollow other_user
+    active_relationships.find_by(followed_id: other_user.id).destroy
+  end
+
+  def following? other_user
+    following.include? other_user
+  end
+
+  def followed_by? other_user
+    followers.include? other_user
+  end
+
+  scope :review_activities, ->(user){PublicActivity::Activity.
+    order(created_at: :desc).where "trackable_type = ? AND owner_id = ?",
+    "Review", user.id}
 end

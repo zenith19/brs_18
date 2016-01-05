@@ -14,11 +14,12 @@ Rails.application.routes.draw do
       resources :requests, only: [:index, :update]
     end
 
-    resources :users, only: [:index, :show, :edit, :update]
     resources :requests, only: [:index, :new, :create, :update]
     resources :books, only: [:index, :show] do
       resources :reviews
     end
     resources :reviews
+    resources :users, only: [:index, :show, :edit, :update]
+    resources :relationships, only: [:create, :destroy]
   end
 end

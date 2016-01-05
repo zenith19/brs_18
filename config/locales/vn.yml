@@ -73,3 +73,7 @@ vn:
   created_reviews_for: "đánh giá tạo ra cho"
   updated_reviews_for: "đánh giá cập nhật cho"
   at: "tại"
+  follow: "Theo"
+  following: "tiếp theo"
+  followers: "Người theo dõi"
+  unfollow: "Hủy theo dõi"

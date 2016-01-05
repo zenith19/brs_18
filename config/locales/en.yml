@@ -124,3 +124,7 @@ en:
   add_review_fail_message: "Review not added"
   reading_history: "Reading History"
   book_title: "Book Title"
+  follow: "Follow"
+  following: "Following"
+  followers: "Followers"
+  unfollow: "Unfollow"
