@@ -27,4 +27,7 @@ class User < ActiveRecord::Base
 
   mount_uploader :picture, ImageUploader
   validate :picture_size
+
+  scope :review_activities, ->(user){PublicActivity::Activity.order(created_at: :desc).
+    where "trackable_type = ? AND owner_id = ?","Review", user.id}
 end

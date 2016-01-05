@@ -69,3 +69,7 @@ vn:
   image_size_notification: "Kích thước hình ảnh nên được ít hơn 3MB"
   user_update_notice: "Người dùng không được cập nhật"
   user_profile: "Thông tin người dùng"
+  user_activity: "Hoạt động"
+  created_reviews_for: "đánh giá tạo ra cho"
+  updated_reviews_for: "đánh giá cập nhật cho"
+  at: "tại"

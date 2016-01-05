@@ -1,0 +1,13 @@
+<% if @user_activities.any? %>
+  <% @user_activities.each do |activity| %>
+    <%= activity.owner.name if activity.owner %>
+      <% if activity.key == "review.create" %>
+        <%= t :created_reviews_for %>
+        <%= link_to activity.trackable.book.title, book_path(activity.trackable.book) if activity.trackable %>
+      <% else %>
+        <%= t :updated_reviews_for %>
+        <%= activity.trackable.book.title if activity.trackable %>
+    <% end %>
+    <%= t :at %>&nbsp<%= activity.created_at.to_s[0..-4] if activity.created_at %><br>
+  <% end %>
+<% end %>
