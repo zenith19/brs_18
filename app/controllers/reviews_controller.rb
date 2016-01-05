@@ -22,6 +22,14 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    if @review.destroy
+      respond_to do |format|
+        format.js
+      end
+    end
+  end
+
   private
   def review_params
     params.require(:review).permit :rating, :content, :book_id
