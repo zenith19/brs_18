@@ -1,0 +1,13 @@
+<ol class="entries">
+  <li id="review_<%= review.id %>">
+    <%= image_tag review.user.picture_url :thumb %>
+    <span class="user"><%= link_to review.user.name, review.user %></span>
+    <span class="timestamp">
+      <%= t "reviewed" %> <%= time_ago_in_words(review.created_at) %> ago.
+    </span>
+    <span class="content">
+      <%= t "rating" %>: <%= review.rating %> <br>
+      <%= review.content %>
+    </span>
+  </li>
+</ol>
