@@ -1,6 +1,6 @@
 <% @requests.each do |request| %>
   <tr>
-    <td><%= link_to request.user.name, "#" %></td>
+    <td><%= link_to request.user.name, user_path(request.user_id) %></td>
     <td><%= request.title %></td>
     <td><%= request.author %></td>
     <td><%= request.publisher %></td>
@@ -8,7 +8,7 @@
     <td><%= request.status %></td>
     <td align="right", id="drop_down">
       <%= form_for [:admin, request] do |f| %>
-        <td><%= f.select :status, collection: @statuses %></td>
+        <td><%= f.select :status, collection: @statuses.keys.to_a %></td>
         <td><%= f.submit t(".change_status"), class: "btn btn-success" %></td>
       <% end %>
     </td>
