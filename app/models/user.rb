@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
   has_many :followers,
             through: :passive_relationships,
             source: :follower
+  has_many :books, through: :user_books
 
   mount_uploader :picture, ImageUploader
   validate :picture_size
