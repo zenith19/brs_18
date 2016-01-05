@@ -1,42 +1,53 @@
 en:
-  about: "About"
-  access_denied: "Access Denied"
-  account: "Account"
-  action: "Action"
-  add_book_text: "Add a book"
-  add_category_sucessful_message: "Category added"
-  add_category_text: "Add Category"
-  add_image: "Add image"
-  add_new: "Add new"
-  add_request: "Add a Request"
-  add_url: "or image URL"
+  about: About
+  access_denied: Access Denied
+  account: Account
+  action: Action
+  add: Add
+  add_book_text: Add a book
+  add_category_sucessful_message: Category added
+  add_category_text: Add Category
+  add_image: Add image
+  add_new: Add new
+  add_request: Add a Request
+  add_review: Add Review
+  add_review_fail_message: Review not added
+  add_review_sucessful_message: Review added
+  add_url: or image URL
+  added_as_favorite: In Favorite List
   admin:
     requests:
       index:
-        all_request: "All Requests"
-        book_author: "Author"
-        book_title: "Book Title"
-        link: "Link"
-        publisher: "Publisher"
-        status: "Status"
-        user_name: "User Name"
-      update:
-        flash_request_update: "Request Updated"
+        all_request: All Requests
+        book_author: Author
+        book_title: Book Title
+        link: Link
+        publisher: Publisher
+        status: Status
+        user_name: User Name
       requests:
-        approve_button: "Approve"
-        cancel_button: "Cancel"
-        change_status: "Change Status"
-  all_categories: "All categories"
-  all_users: "All users"
-  author: "Author"
-  book_added_text: "Book Added"
-  book_delete_message: "Book Deleted"
-  book_updated_text: "Book updated Successfully"
-  category: "Category"
-  category_delete_message: "Category deleted"
-  confirm_message: "You sure?"
-  confirm_message_delete: "Are you sure to delete"
-  contact: "Contact"
+        approve_button: Approve
+        cancel_button: Cancel
+        change_status: Change Status
+      update:
+        flash_request_update: Request Updated
+  ago: ago
+  all: All
+  all_books: All Books
+  all_categories: All categories
+  all_users: All users
+  at: at
+  author: Author
+  book_added_text: Book Added
+  book_delete_message: Book Deleted
+  book_title: Book Title
+  book_updated_text: Book updated Successfully
+  category: Category
+  category_delete_message: Category deleted
+  confirm_message: You sure?
+  confirm_message_delete: Are you sure to delete
+  contact: Contact
+  created_reviews_for: created reviews for
   date:
     formats:
       short: '%d-%m-%Y'
@@ -44,93 +55,66 @@ en:
     - :day
     - :month
     - :year
-  delete_success_message: "User deleted"
-  delete_user: "Delete"
-  dev_by: "Developed by"
-  edit_category_text: "Edit Category"
-  edit_user: "Edit"
-  email: "Email"
-  dev_by: "Developed by"
-  edit_category_text: "Edit Category"
-  form_contains: "The form contains"
-  hello: "Hello world"
-  home: "Home"
-  log_in: "Log in"
-  log_out: "Log out"
-  name: "Name"
-  new_category: "New Category"
-  page: "Page"
-  profile: "Profile"
-  publish_date: "Publish Date"
-  remove_option: "Remove image"
-  request: "Request"
+  delete_success_message: User deleted
+  delete_user: Delete
+  dev_by: Developed by
+  edit_category_text: Edit Category
+  edit_user: Edit
+  email: Email
+  favourite: Favourite
+  favourite_button: Favorite
+  follow: Follow
+  followers: Followers
+  following: Following
+  form_contains: The form contains
+  hello: Hello world
+  home: Home
+  image_size_notification: Image size shoule be less then 3MB
+  log_in: Log in
+  log_out: Log out
+  marked_as_favorite: Marked as Favorite
+  name: Name
+  new_category: New Category
+  not_favourite: Not Favourite
+  page: Page
+  profile: Profile
+  publish_date: Publish Date
+  reading_history: Reading History
+  remove_option: Remove image
+  request: Request
   requests:
     create:
-      flash_request_success: "Request Successfully Created"
+      flash_request_success: Request Successfully Created
     index:
-      all_request: "My Requests"
-      book_author: "Author Name"
-      book_title: "Book Title"
-      link: "Link"
-      publisher: "Publisher"
-      status: "Status"
+      all_request: My Requests
+      book_author: Author Name
+      book_title: Book Title
+      link: Link
+      publisher: Publisher
+      status: Status
     new:
-      flash_request_success: "Request Successfully Created"
-      sent_request: "Send Request"
+      flash_request_success: Request Successfully Created
+      sent_request: Send Request
     requests:
-      cancel_button: "Cancel"
+      cancel_button: Cancel
     update:
-      flash_request_update: "Request Successfully Updated"
-  save_change_text: "Save changes"
-  sign_up_now: "Sign up now!"
-  system_name: "Framgia Book Review System"
-  title: "Title"
-  update_book: "Update book"
-  update_category_sucessful_message: "Category updated"
-  user_removal_failure: "User not deleted"
-  users: "Users"
-  view_all: "View all"
-  view_all_request: "View All Requests"
-  welcome_message: "Welcome to"
-  title: "Title"
-  author: "Author"
-  publish_date: "Publish Date"
-  page: "Page"
-  users: "Users"
-  all_users: "All users"
-  name: "Name"
-  email: "Email"
-  action: "Action"
-  edit_user: "Edit"
-  delete_user: "Delete"
-  confirm_message_delete: "Are you sure to delete"
-  delete_success_message: "User deleted"
-  user_removal_failure: "User not deleted"
-  update_success_message: "User updated successfully"
-  user_removal_failure: "User not deleted"
-  user_update_notice: "User not updated"
-  view_all: "View all"
-  title_contains: "Title contains"
-  search: "Search"
-  view_all_request: "View All Requests"
-  welcome_message: "Welcome to"
-  image_size_notification: "Image size shoule be less then 3MB"
-  user_profile: "User profile"
-  created_reviews_for: "created reviews for"
-  updated_reviews_for: "updated reviews for"
-  at: "at"
-  add_review: "Add Review"
-  add_review_sucessful_message: "Review added"
-  add_review_fail_message: "Review not added"
-  reading_history: "Reading History"
-  book_title: "Book Title"
-  follow: "Follow"
-  following: "Following"
-  followers: "Followers"
-  unfollow: "Unfollow"
-  ago: "ago"
-  favourite: "Favourite"
-  not_favourite: "Not Favourite"
-  all: "All"
-  write_comment: "Write Comment"
-  add: "Add"
+      flash_request_update: Request Successfully Updated
+  save_change_text: Save changes
+  search: Search
+  sign_up_now: Sign up now!
+  system_name: Framgia Book Review System
+  title: Title
+  title_contains: Title contains
+  unfollow: Unfollow
+  update_book: Update book
+  update_category_sucessful_message: Category updated
+  update_success_message: User updated successfully
+  updated_reviews_for: updated reviews for
+  user_profile: User profile
+  user_removal_failure: User not deleted
+  user_update_notice: User not updated
+  users: Users
+  view_all: View all
+  view_all_request: View All Requests
+  welcome_message: Welcome to
+  write_comment: Write Comment
