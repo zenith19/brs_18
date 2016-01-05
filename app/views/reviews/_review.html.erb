@@ -1,17 +1,42 @@
-<ol class="entries">
-  <li id="review_<%= review.id %>">
+<ol class="entries" id="review-<%= review.id %>">
+  <li>
     <%= image_tag review.user.picture_url :thumb  if review.user.picture? %>
     <span class="user"><%= link_to review.user.name, review.user %></span>
     <span class="timestamp">
       <%= t "reviewed" %> <%= time_ago_in_words(review.created_at) %> <%= t "ago" %>.
-      <% if can?(:destroy, review) %>
+      <% if can? :edit, review %>
+        <%= link_to t("Edit"), "#", "data-toggle": "modal", "data-target": "#edit_review_#{review.id}" %>
+        <div class="modal fade" id="<%= "edit_review_#{review.id}" %>"
+          tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"><%= t "review.edit-review" %></h4>
+              </div>
+              <div class="modal-body" id="edit-review-form-<%= review.id %>">
+                <%= render "reviews/edit_modal", review: review %>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                  <%= t "review.close" %>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <% if can? :destroy, review %>
         <%= link_to t(:delete), review, remote: true, method: :delete,
           data: {confirm: t(:confirm_message)} %>
       <% end %>
     </span>
     <span class="content">
-      <%= t "rating" %>: <%= review.rating %> <br>
-      <%= review.content %>
+      <%= t "rating" %>:
+      <span id="review-rating-<%= review.id %>"><%= review.rating %></span> <br>
+      <div id="review-content-<%= review.id %>">
+        <%= review.content %>
+      </div>
     </span>
     <div id="comments_of_review_<%= review.id %>" class="row">
       <span class="content">

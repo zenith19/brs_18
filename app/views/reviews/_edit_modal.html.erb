@@ -1,0 +1,13 @@
+<%= form_for review, html: {role: :form, "data-model": "review"}, remote: true do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.hidden_field :book_id, value: @book.id %>
+
+  <%= f.label :rating %>
+    <%= f.select :rating, (1..5), {prompt: false}, {class: "form-control"} %>
+
+  <%= f.label :content %>
+  <%= f.text_area :content, class: "form-control" %>
+
+  <%= f.submit t(:save_change_text), class: "btn btn-primary" %>
+<% end %>
