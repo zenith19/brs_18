@@ -14,4 +14,6 @@ class Book < ActiveRecord::Base
     reject_if: proc {|attributes| attributes[:image].blank?}
 
   scope :latest, -> {order "created_at DESC"}
+  scope :favourite, -> user_id{joins(:user_books).where user_books: 
+    {user_id: user_id, favourite: true}}
 end

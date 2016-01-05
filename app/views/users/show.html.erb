@@ -1,5 +1,4 @@
 <h1><%= t :user_profile %></h1>
-
 <div class="row">
   <div class="col-md-5">
     <p><%= render "user_picture" %></p>
@@ -7,11 +6,12 @@
     <p><%= t :email %>: <%= @user.email %></p>
   </div>
 </div>
+<%= render "favorite_books_list" %><br>
 <%= render "reading_history" %>
-  <div class="row">
-    <div class="col-md-7">
-      <h3><%= t :user_activity %></h3>
-      <p><%= render "user_activity" %></p>
-    </div>
+<div class="row">
+  <div class="col-md-7">
+    <h3><%= t :user_activity %></h3>
+    <p><%= render "user_activity" %></p>
   </div>
+</div>
 </div>
