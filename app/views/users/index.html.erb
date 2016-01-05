@@ -1,16 +1,19 @@
 <h1><%= t :all_users %></h1>
-  <table class="table">
-    <tr>
-      <th><%= t :name %></th>
-      <th><%= t :email %></th>
-    </tr>
+
+<table class="table">
+  <thead>
+    <th><%= t :name %></th>
+    <th><%= t :email %></th>
+  </thead>
+  <tbody>
     <% @users.each do |user| %>
       <tr>
         <td><%= link_to user.name, user %></td>
         <td><%= user.email %></td>
       </tr>
     <% end %>
-  </table>
+    </tbody>
+</table>
 
 <%= paginate @users %>
 <%= page_entries_info @users %>
