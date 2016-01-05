@@ -1,0 +1,48 @@
+<div class="form-inline">
+  <div class="form-inline">
+    <div class="form-group col-sm-6">
+      <%= f.label :category_id_eq, t("category") %>
+      <%= f.select :category_id_eq,
+        options_from_collection_for_select(@categories,
+        :id, :name, @search.category_id_eq), {prompt: false},
+        {class: "form-control"} %>
+    </div>
+
+    <div class="form-group col-sm-6">
+      <%= f.label :title_cont, t("title_contains") %>
+      <%= f.text_field :title_cont, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-inline">
+    <div class="form-group col-sm-6">
+      <%= f.label :rating_gteq, t("rating_between") %>
+      <%= f.text_field :rating_gteq, class: "form-control" %>
+    </div>
+
+    <div class="form-group col-sm-6">
+      <%= f.label :rating_lteq, t("and") %>
+      <%= f.text_field :rating_lteq, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-inline">
+    <div class="form-group col-sm-1">
+      <%= f.radio_button :filter_book, "all #{current_user.id}", checked: true, 
+        class: "form-control search" %>
+      <%= f.label :filter_book, t(:all) %>
+    </div>
+
+    <div class="form-group col-sm-2">
+      <%= f.radio_button :filter_book, "favourite #{current_user.id}", 
+        class: "form-control search" %>
+      <%= f.label :filter_book, t(:favourite) %>
+    </div>
+
+    <div class="form-group col-sm-2">
+      <%= f.radio_button :filter_book, "unfavourite #{current_user.id}", 
+        class: "form-control search" %>
+      <%= f.label :filter_book, t(:not_favourite) %>
+    </div>
+  </div>
+</div>
