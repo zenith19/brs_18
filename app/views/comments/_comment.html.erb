@@ -4,13 +4,37 @@
     <span class="user"><%= link_to comment.user.name, comment.user %></span>
     <span class="timestamp">
       <%= t "commented" %> <%= time_ago_in_words(comment.created_at) %> <%= t "ago" %>.
+      <% if can? :edit, comment %>
+        <%= link_to t("Edit"), "#", "data-toggle": "modal", "data-target": "#edit_comment_#{comment.id}" %>
+        <div class="modal fade" id="<%= "edit_comment_#{comment.id}" %>"
+          tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"><%= t "comment.edit-comment" %></h4>
+              </div>
+              <div class="modal-body" id="edit-comment-form-<%= comment.id %>">
+                <%= render "comments/edit_modal", comment: comment %>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                  <%= t "comment.close" %>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
       <% if can? :destroy, comment %>
         <%= link_to t(:delete), comment, remote: true, method: :delete,
           data: {confirm: t(:confirm_message)} %>
       <% end %>
     </span>
     <span class="content">
-      <%= comment.content %>
+      <div id="comment-content-<%= comment.id %>">
+        <%= comment.content %>
+      </div>
     </span>
   </li>
 </ol>

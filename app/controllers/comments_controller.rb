@@ -9,6 +9,13 @@ class CommentsController < ApplicationController
     end
   end
 
+  def update
+    @comment.update_attributes comment_params
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def destroy
     @comment.destroy
     respond_to do |format|
