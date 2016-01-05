@@ -1,0 +1,11 @@
+<div class="col-md-12">
+  <%= form_for [review, @comment], remote: true do |f| %>
+    <%= render "shared/error_messages", object: f.object %>
+
+    <%= f.hidden_field :review_id, value: review.id %>
+
+    <%= f.text_field :content, placeholder: t("write_comment"), class: "comment_box form-control" %>
+
+    <%= f.submit t(:add), class: "btn btn-primary" %>
+  <% end %>
+</div>

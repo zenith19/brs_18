@@ -13,5 +13,13 @@
       <%= t "rating" %>: <%= review.rating %> <br>
       <%= review.content %>
     </span>
+    <div id="comments_of_review_<%= review.id %>" class="row">
+      <span class="content">
+        <b><%= t "comments" %></b>
+        <div id="comments-review-form-<%= review.id %>">
+          <%= render "comments/form", review: review %>
+        </div>
+      </span>
+    </div>
   </li>
 </ol>
