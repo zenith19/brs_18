@@ -3,7 +3,11 @@
     <%= image_tag review.user.picture_url :thumb %>
     <span class="user"><%= link_to review.user.name, review.user %></span>
     <span class="timestamp">
-      <%= t "reviewed" %> <%= time_ago_in_words(review.created_at) %> ago.
+      <%= t "reviewed" %> <%= time_ago_in_words(review.created_at) %> <%= t "ago" %>.
+      <% if can?(:destroy, review) %>
+        <%= link_to t(:delete), review, remote: true, method: :delete,
+          data: {confirm: t(:confirm_message)} %>
+      <% end %>
     </span>
     <span class="content">
       <%= t "rating" %>: <%= review.rating %> <br>

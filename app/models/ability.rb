@@ -13,6 +13,7 @@ class Ability
         request.try(:user) == user
       end
       can :create, Review
+      can :destroy, Review, user_id: user.id
     end
   end
 end
