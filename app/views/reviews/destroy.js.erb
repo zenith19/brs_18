@@ -1,1 +1,3 @@
 $("#review-<%= @review.id %>").remove();
+$("#book-rating").html("<%= @book.rating %>");
+$("#book-rater").html("<%= Review.total_rater @book.id %>");

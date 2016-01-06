@@ -4,4 +4,6 @@
   $("#reviews-rating-<%= @review.id %>").html("<%= @review.rating %>");
   $("#reviews-book-<%= @review.id %>").html("<%= @review.content %>");
   $("#review_form").hide();
+  $("#book-rating").html("<%= @review.book.rating %>");
+  $("#book-rater").html("<%= Review.total_rater @review.book.id %>");
 <% end %>
