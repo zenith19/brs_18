@@ -11,8 +11,14 @@
     </p>
   </div>
   <div class="col-md-8">
-    <%= render "shared/status_form" %>
-    <%= render "favorite" %><br>
+    <table>
+      <tr>
+        <td><%= render "favorite" %></td>
+        <td>&nbsp;&nbsp;</td>
+        <td><%= render "shared/status_form" %></td>
+      </tr>
+    </table>
+    <br>
     <div id="review_form">
       <%= render "reviews/form" unless @reviews.detect{|review|
       	review.user_id == current_user.id} %>
