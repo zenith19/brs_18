@@ -7,8 +7,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user_books = UserBook.by_user(current_user.id).page(params[:page]).per 5
-    @books = Book.favourite(current_user.id).page(params[:fbook_page]).per 5
+    @user_books = UserBook.by_user(current_user.id).page(params[:page]).per 50
+    @books = Book.favourite(current_user.id).page(params[:fbook_page]).per 50
     @user_activities = User.review_activities current_user
 
     load_follow_dependencies(params[:type]) if params[:type]
