@@ -5,6 +5,7 @@ class Book < ActiveRecord::Base
   has_many :reviews
   has_many :book_photos, dependent: :destroy
   has_many :users, through: :user_books
+  belongs_to :user
 
   validates :title, presence: true, uniqueness: {case_sensitive: false}
   validates :author, presence: true

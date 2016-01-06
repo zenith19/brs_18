@@ -1,0 +1,12 @@
+<div id="status_form">
+  <%= form_for @user_book, url: reading_status_path(@user_book),
+    remote: true do |f| %>
+    <div><%= f.hidden_field :status, value: @user_book.status == "not_read"?
+      :reading : :finished %></div>
+    <% if @user_book.status == "finished" %>
+      <p><%= t :book_finished %></p>
+    <% else %>
+      <%= f.submit @user_book.status.humanize, class: "btn btn-info" %>
+    <% end %>
+  <% end %>
+</div>

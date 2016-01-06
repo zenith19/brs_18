@@ -25,5 +25,6 @@ Rails.application.routes.draw do
     resources :relationships, only: [:create, :destroy]
     resources :comments
     resources :favourites, only: :update
+    resources :reading_statuses, only: :update
   end
 end

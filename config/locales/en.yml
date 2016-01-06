@@ -118,3 +118,6 @@ en:
   view_all_request: View All Requests
   welcome_message: Welcome to
   write_comment: Write Comment
+  book_finished: "Book finished!"
+  start_reading: "Start reading"
+  finish_reading: "Finish reading"
