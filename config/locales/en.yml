@@ -14,7 +14,7 @@ en:
   add_review_fail_message: Review not added
   add_review_sucessful_message: Review added
   add_url: or image URL
-  added_as_favorite: In Favorite List
+  added_as_favourite: "In Favourite List"
   admin:
     requests:
       index:
@@ -72,7 +72,7 @@ en:
   image_size_notification: Image size shoule be less then 3MB
   log_in: Log in
   log_out: Log out
-  marked_as_favorite: Marked as Favorite
+  mark_as_favorite: "Mark as Favorite"
   name: Name
   new_category: New Category
   not_favourite: Not Favourite
