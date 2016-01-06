@@ -1,9 +1,11 @@
 class ReviewsController < ApplicationController
   load_and_authorize_resource
+  before_action :load_book
 
   def create
     @review.user = current_user
-    if ReviewService.new(@review, @review.book).save
+    if ReviewService.new(@review, @book).save
+      @comment = @review.comments.new
       respond_to do |format|
         format.html do
           flash[:success] = t "add_review_sucessful_message"
@@ -23,7 +25,7 @@ class ReviewsController < ApplicationController
   end
 
   def update
-    if ReviewService.new(@review, @review.book).update review_params
+    if ReviewService.new(@review, @book).update review_params
       respond_to do |format|
         format.js
       end
@@ -42,5 +44,9 @@ class ReviewsController < ApplicationController
   private
   def review_params
     params.require(:review).permit :rating, :content, :book_id
+  end
+
+  def load_book
+    @book = @review.book
   end
 end
