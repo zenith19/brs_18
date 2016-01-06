@@ -4,6 +4,7 @@ vn:
   account: "tài khoản"
   action: "hoạt động"
   add_request: "Thêm một yêu cầu"
+  added_as_favourite: "Trong Danh sách yêu thích"
   admin:
     requests:
       index:
@@ -31,6 +32,7 @@ vn:
   home: "Nhà"
   log_in: "Đăng nhập"
   log_out: "Đăng xuất"
+  mark_as_favorite: "Đánh dấu là yêu thích"
   name: "Tên"
   profile: "Hồ sơ"
   request: "yêu cầu"
