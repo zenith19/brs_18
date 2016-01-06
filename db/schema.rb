@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160105172800) do
+ActiveRecord::Schema.define(version: 20160106112257) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id",   limit: 4
@@ -46,8 +46,9 @@ ActiveRecord::Schema.define(version: 20160105172800) do
     t.date     "publish_date"
     t.integer  "page",         limit: 4
     t.integer  "rating",       limit: 4
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.text     "description",  limit: 65535
   end
 
   add_index "books", ["category_id"], name: "index_books_on_category_id", using: :btree

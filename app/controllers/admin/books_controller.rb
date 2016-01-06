@@ -42,8 +42,9 @@ class Admin::BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit :category_id, :title, :author, :publish_date,
-      :page, book_photos_attributes: [:id, :image, :_destroy]
+    params.require(:book).permit :category_id, :title, :description, 
+      :author, :publish_date, :page, 
+      book_photos_attributes: [:id, :image, :_destroy]
   end
 
   def load_categories
