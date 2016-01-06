@@ -4,7 +4,7 @@ class Admin::RequestsController < ApplicationController
 
   def index
     @requests = @requests.page(params[:page]).per 10
-    @statuses = Request.statuses.keys.to_a.select{|status| status == "approved" || status == "not_approved"}
+    @statuses = Request.statuses.select{|status| status == "approved" || status == "not_approved"}
   end
 
   def update

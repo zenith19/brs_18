@@ -20,7 +20,7 @@ class RequestsController < ApplicationController
   end
 
   def update
-    @request.cancel!
+    @request.canceled!
     flash[:success] = t ".flash_request_update"
     redirect_to requests_path
   end
