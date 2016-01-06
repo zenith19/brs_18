@@ -13,7 +13,7 @@
   <tbody>
     <% @books.each do |book|%>
       <tr>
-        <td><%= image_tag book.book_photos.first.image_url(:thumb) if 
+        <td><%= image_tag book.book_photos.first.image_url(:thumb) if
           book.book_photos.exists? %></td>
         <td><%= link_to book.title, [:admin, book] %></td>
         <td><%= book.author %></td>

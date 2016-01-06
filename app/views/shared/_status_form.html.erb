@@ -4,7 +4,7 @@
     <div><%= f.hidden_field :status, value: @user_book.status == "not_read"?
       :reading : :finished %></div>
     <% if @user_book.status == "finished" %>
-      <p><%= t :book_finished %></p>
+      <button class="btn btn-info" disabled="true"><%= t :book_finished %></button>
     <% else %>
       <%= f.submit @user_book.status.humanize, class: "btn btn-info" %>
     <% end %>

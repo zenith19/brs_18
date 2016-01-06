@@ -1,16 +1,35 @@
-<div class="row">
-  <%= t "write_review" %>
-  <%= form_for [@book, @review], remote: true do |f| %>
-    <%= render "shared/error_messages", object: f.object %>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <span id="write_review_title">
+      <%= t "write_review" %>
+    </span>
+    <hr>
+    <div class="tab-pane" id="add-comment">
+      <%= form_for [@book, @review], remote: true do |f| %>
+        <%= render "shared/error_messages", object: f.object %>
 
-    <%= f.hidden_field :book_id, value: @book.id %>
+        <%= f.hidden_field :book_id, value: @book.id %>
 
-    <%= f.label :rating %>
-    <%= f.select :rating, (1..5), {prompt: false}, {class: "form-control"} %>
-
-    <%= f.label :content %>
-    <%= f.text_area :content, class: "form-control" %>
-
-    <%= f.submit t(:add_review), class: "btn btn-primary" %>
-  <% end %>
+        <div >
+          <label for="uploadMedia" class="col-sm-2 control-label">Rating</label>
+          <div class="col-sm-10">
+            <%= f.select :rating, (1..5), {prompt: false}, {class: "form-control"} %>
+          </div>
+        </div>
+        <div >
+          <label for="email" class="col-sm-2 control-label">Review</label>
+          <div class="col-sm-10">
+            <%= f.text_area :content, class: "form-control" %>
+          </div>
+        </div>
+        <div >
+          <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-success btn-circle text-uppercase" type="submit" id="submitComment">
+              <span class="glyphicon glyphicon-send"></span> <%= t "summit_review" %>
+            </button>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

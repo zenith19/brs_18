@@ -1,11 +1,22 @@
-<div class="col-md-12">
+<div class="tab-pane" id="add-comment">
   <%= form_for [review, @comment], remote: true do |f| %>
     <%= render "shared/error_messages", object: f.object %>
 
     <%= f.hidden_field :review_id, value: review.id %>
 
-    <%= f.text_field :content, placeholder: t("write_comment"), class: "comment_box form-control" %>
+    <div class="form-group">
+      <label for="email" class="col-sm-2 control-label"></label>
+      <div class="col-sm-10">
+        <%= f.text_area :content, placeholder: t("write_comment"), class: "comment_box form-control" %>
+      </div>
+    </div>
 
-    <%= f.submit t(:add), class: "btn btn-primary" %>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button class="btn btn-success btn-circle text-uppercase" type="submit" id="submitComment">
+          <span class="glyphicon glyphicon-send"></span> <%= t "summit_comment" %>
+        </button>
+      </div>
+    </div>
   <% end %>
 </div>

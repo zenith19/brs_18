@@ -1,6 +1,6 @@
 <div id="favourite_form">
   <% if @user_book.favourite %>
-    <p><%= t :added_as_favourite %></p>
+    <button class="btn btn-success" disabled="true"><%= t :added_as_favourite %></button>
   <% else %>
     <%= form_for @user_book, url: favourite_path(@user_book), remote: true do |f| %>
       <%= f.hidden_field :favourite, value: true %>

@@ -1,32 +1,78 @@
 <h1><%= t "book_information" %></h1>
+
+<div class="row">
+  <div class="col-md-3">
+    <%= image_tag @book.book_photos.first.image.url(:large) %>
+  </div>
+  <div class="col-md-9">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <span id="book_title">
+          <%= @book.title %>
+        </span>
+        <span class="pull-right" >
+          <button class="btn btn-info" id="rating-btn">
+            <span id="book-rating"><%= @book.rating %></span> / 5
+          </button>
+        </span>
+        <hr>
+        <p><%= @book.description %></p>
+        <hr>
+        <table>
+          <tr>
+            <td><%= render "shared/status_form" %></td>
+            <td>&nbsp;&nbsp;</td>
+            <td><%= render "shared/favourite" %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
+<hr>
+
 <div class="row">
   <div class="col-md-4">
-    <p><b><%= t "title" %>:</b> <b><%= @book.title %></b></p>
-    <p><%= t "author" %>: <%= @book.author %></p>
-    <p><%= t "publish_date" %>: <%= @book.publish_date %></p>
-    <p><%= t "page" %>: <%= @book.page %></p>
-    <p><%= t "category" %>: <%= @book.category.name %></p>
-    <p><%= t "Rating" %>: <span id="book-rating"><%= @book.rating %></span></p>
-    <p><%= t "rated_by" %>: <span id="book-rater"><%= @total_reviewer %></span></p>
-    <p>
-      <%= render "book_photo" %>
-    </p>
+    <div class="row">
+      <div class="col-md-10">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+          <h3 class="panel-title"><%= t "book_info" %></h3>
+          </div>
+          <div class="panel-body">
+            <p><b><%= t "title" %>:</b> <b><%= @book.title %></b></p>
+            <p><%= t "author" %>: <%= @book.author %></p>
+            <p><%= t "publish_date" %>: <%= @book.publish_date %></p>
+            <p><%= t "page" %>: <%= @book.page %></p>
+            <p><%= t "category" %>: <%= @book.category.name %></p>
+            <p><%= t "total_review" %>: <span id="book-rater"><%= @total_reviewer %></span></p>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+          <h3 class="panel-title"><%= t "book_photos" %></h3>
+          </div>
+          <div class="panel-body">
+            <p>
+              <%= render "book_photo" %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="col-md-8">
-    <table>
-      <tr>
-        <td><%= render "shared/favourite" %></td>
-        <td>&nbsp;&nbsp;</td>
-        <td><%= render "shared/status_form" %></td>
-      </tr>
-    </table>
-    <br>
     <div id="review_form">
       <%= render "reviews/form" unless @reviews.detect{|review|
       	review.user_id == current_user.id} %>
     </div>
-    <div id="reviews-book">
-      <%= render @reviews %>
+    <div class="tab-pane active" id="comments-logout">
+      <ul class="media-list">
+        <div id="reviews-book">
+          <%= render @reviews %>
+        </div>
+      </ul>
     </div>
   </div>
 </div>
