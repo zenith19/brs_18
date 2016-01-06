@@ -1,33 +1,27 @@
 <h1><%= t "all_books" %></h1>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-      <div class="input-group" id="adv-search">
-          <input readonly="true" type="text" class="form-control" placeholder="<%= t "books_search_placeholder" %>"/>
-          <div class="input-group-btn">
-            <div class="btn-group" role="group">
-              <div class="dropdown dropdown-lg">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  <span class="caret"></span>
-                </button>
-                <div class="dropdown-menu dropdown-menu-right" role="menu">
-                  <%= search_form_for @search, class: "form-horizontal", role: "form" do |f| %>
-                    <%= render "search_fields", f: f %>
-                    <button type="submit" class="btn btn-primary">
-                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      <%= t"search" %>
-                    </button>
-                  <% end %>
-                </div>
-              </div>
-            </div>
+<div class="pull-left">
+  <div class="input-group" id="adv-search">
+    <input readonly="true" type="text" class="form-control" placeholder="<%= t "books_search_placeholder" %>"/>
+    <div class="input-group-btn">
+      <div class="btn-group" role="group">
+        <div class="dropdown dropdown-lg">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <span class="caret"></span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right" role="menu">
+            <%= search_form_for @search, class: "form-horizontal", role: "form" do |f| %>
+              <%= render "search_fields", f: f %>
+              <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                <%= t"search" %>
+              </button>
+            <% end %>
           </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 <table class="table">
   <thead>
     <th></th>
@@ -53,6 +47,5 @@
     <% end %>
   </tbody>
 </table>
-
 <%= paginate @books %>
 <%= page_entries_info @books %>
