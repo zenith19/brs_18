@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review.user = current_user
-    if @review.save
+    if ReviewService.new(@review, @review.book).save
       respond_to do |format|
         format.html do
           flash[:success] = t "add_review_sucessful_message"
@@ -23,14 +23,16 @@ class ReviewsController < ApplicationController
   end
 
   def update
-    @review.update_attributes review_params
-    respond_to do |format|
-      format.js
+    if ReviewService.new(@review, @review.book).update review_params
+      respond_to do |format|
+        format.js
+      end
     end
   end
 
   def destroy
-    if @review.destroy
+    @book = @review.book
+    if ReviewService.new(@review, @book).destroy
       respond_to do |format|
         format.js
       end
