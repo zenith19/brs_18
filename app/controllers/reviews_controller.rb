@@ -22,6 +22,13 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def update
+    @review.update_attributes review_params
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def destroy
     if @review.destroy
       respond_to do |format|

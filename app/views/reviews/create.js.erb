@@ -1,5 +1,7 @@
 <% if @review.errors.any? %>
   $("#review_form").prepend("<%= j render("shared/error_messages", object: @review) %>");
 <% else %>
+  $("#reviews-rating-<%= @review.id %>").html("<%= @review.rating %>");
+  $("#reviews-book-<%= @review.id %>").html("<%= @review.content %>");
   $("#review_form").hide();
 <% end %>

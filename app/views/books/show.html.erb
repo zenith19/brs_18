@@ -15,7 +15,7 @@
     <div id="review_form">
       <%= render "reviews/form" unless @reviews.detect{|review| review.user_id == current_user.id} %>
     </div>
-    <div id="reviews">
+    <div id="reviews-book">
       <%= render @reviews %>
     </div>
   </div>
