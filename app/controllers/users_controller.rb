@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   def update
     if @user.update user_params
       flash[:success] = t :update_success_message
-      redirect_to root_path # will change later
+      redirect_to user_path @user
     else
       flash[:notice] = t :user_update_notice
       render :edit

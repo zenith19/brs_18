@@ -6,6 +6,19 @@ class Admin::UsersController < ApplicationController
     @users = @users.page(params[:page]).per 10
   end
 
+  def edit
+  end
+
+  def update
+    if @user.update user_params
+      flash[:success] = t :update_success_message
+      redirect_to user_path @user
+    else
+      flash[:notice] = t :user_update_notice
+      render :edit
+    end
+  end
+
   def destroy
     if @user.destroy
       flash[:success] = t :delete_success_message
