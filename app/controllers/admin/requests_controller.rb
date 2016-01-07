@@ -8,7 +8,7 @@ class Admin::RequestsController < ApplicationController
   end
 
   def update
-    @request.update_attributes request_params
+    BookService.new(@request).update request_params
     flash[:success] = t ".flash_request_update"
     redirect_to admin_requests_path
   end

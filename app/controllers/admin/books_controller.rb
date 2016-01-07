@@ -10,7 +10,7 @@ class Admin::BooksController < ApplicationController
   end
 
   def create
-    if @book.save
+    if BookService.new(@book).save
       flash[:success] = t "book_added_text"
       redirect_to admin_books_path
     else
@@ -26,7 +26,7 @@ class Admin::BooksController < ApplicationController
   end
 
   def update
-    if @book.update_attributes book_params
+    if BookService.new(@book).update book_params
       flash[:success] = t "book_updated_text"
       redirect_to admin_books_path
     else
@@ -35,15 +35,15 @@ class Admin::BooksController < ApplicationController
   end
 
   def destroy
-    @book.destroy
+    BookService.new(@book).destroy
     flash[:success] = t "book_delete_message"
     redirect_to admin_books_path
   end
 
   private
   def book_params
-    params.require(:book).permit :category_id, :title, :description, 
-      :author, :publish_date, :page, 
+    params.require(:book).permit :category_id, :title, :description,
+      :author, :publish_date, :page,
       book_photos_attributes: [:id, :image, :image_cache, :remote_image_url, :_destroy]
   end
 
