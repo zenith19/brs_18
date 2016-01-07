@@ -7,6 +7,7 @@ class Category < ActiveRecord::Base
     presence: true,
     length: {maximum: 30},
     uniqueness: {case_sensitive: false}
+  validates :picture, presence: true
 
   mount_uploader :picture, ImageUploader
 

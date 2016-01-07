@@ -5,7 +5,11 @@
         <img class="card-bkimg" alt="" src="http://lorempixel.com/100/100/people/9/">
       </div>
       <div class="useravatar">
-        <%= image_tag @user.picture.url(:medium), class: "card-bkimg" %>
+        <% if @user.picture? %>
+          <%= image_tag @user.picture.url(:medium), class: "card-bkimg" %>
+        <% else %>
+          <%= image_tag "default-user.png", class: "card-bkimg" %>
+        <% end %>
       </div>
       <div class="card-info">
         <span class="card-title"><%= @user.name %></span>

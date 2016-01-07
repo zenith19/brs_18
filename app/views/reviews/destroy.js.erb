@@ -1,4 +1,4 @@
 $("#book-rating").html("<%= @book.rating %>");
-$("#book-rater").html("<%= Review.total_rater @book.id %>");
+$("#book-rater").html("<%= @book.reviews.size %>");
 $("#review_<%= @review.id %>").remove();
 $("#review_form").show();

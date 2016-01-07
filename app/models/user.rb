@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+    :recoverable, :rememberable, :trackable, :validatable
   belongs_to :books
   has_many :comments
   has_many :requests
@@ -33,13 +33,15 @@ class User < ActiveRecord::Base
 
   scope :activities, ->(user){PublicActivity::Activity.
       order(created_at: :desc).where "owner_id = ?", user.id}
-  scope :review_activities, ->(user){PublicActivity::Activity.
-      order(created_at: :desc).where "trackable_type = ? AND owner_id = ?",
-      "Review", user.id}
+  scope :review_activities, ->(user){PublicActivity::Activity
+    .order(created_at: :desc).where "trackable_type = ? AND owner_id = ?",
+    "Review", user.id}
+  scope :only_users, ->{where.not admin: true}
 
   def liked? activity
     self.likes.exists? activity_id: activity.id
   end
+
   def follow other_user
     active_relationships.create followed_id: other_user.id
   end
