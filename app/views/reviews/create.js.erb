@@ -3,6 +3,7 @@
 <% else %>
   $("#reviews-book").prepend("<%= j render "review", review: @review %>");
   $("#review_form").hide();
-  $("#book-rating").html("<%= @review.book.rating %>");
+  $(".rating_box").val("1")
+  $(".review_box").val("");
   $("#book-rater").html("<%= Review.total_rater @review.book.id %>");
 <% end %>

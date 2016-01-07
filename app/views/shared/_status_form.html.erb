@@ -6,7 +6,7 @@
     <% if @user_book.status == "finished" %>
       <button class="btn btn-info" disabled="true"><%= t :book_finished %></button>
     <% else %>
-      <%= f.submit @user_book.status.humanize, class: "btn btn-info" %>
+      <%= f.submit @user_book.status.humanize, class: "btn btn-info btn-circle" %>
     <% end %>
   <% end %>
 </div>
