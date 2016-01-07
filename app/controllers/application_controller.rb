@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   include PublicActivity::StoreController
   include CanCan::ControllerAdditions
   rescue_from CanCan::AccessDenied do |exception|
-    flash[:error] = I18n.t :access_denied
+    flash[:danger] = I18n.t :access_denied
     redirect_to root_path
   end
 

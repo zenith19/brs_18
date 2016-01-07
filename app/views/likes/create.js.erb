@@ -1,1 +1,2 @@
 $("div#<%= @activity.id %>").html("<%= escape_javascript(render("likes/unlike", activity: @activity)) %>");
+$("#like-count-<%= @activity.id %>").html("<%= j render "shared/like_count", activity: @activity %>");

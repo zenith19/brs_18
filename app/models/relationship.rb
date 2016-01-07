@@ -6,6 +6,6 @@ class Relationship < ActiveRecord::Base
   validates :followed, presence: true
 
   include PublicActivity::Model
-  tracked except: [:destroy, :update],
+  tracked except: [:update],
     owner: ->(controller, model) {controller && controller.current_user}
 end
