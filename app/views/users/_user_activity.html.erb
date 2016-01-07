@@ -1,13 +1,20 @@
+<h3><%= t :activities %></h3>
+
 <% if @user_activities.any? %>
   <% @user_activities.each do |activity| %>
     <%= activity.owner.name if activity.owner %>
-      <% if activity.key == "review.create" %>
-        <%= t :created_reviews_for %>
-        <%= link_to activity.trackable.book.title, book_path(activity.trackable.book) if activity.trackable %>
-      <% else %>
-        <%= t :updated_reviews_for %>
-        <%= activity.trackable.book.title if activity.trackable %>
+    <% if activity.key == "review.create" %>
+      <%= t :created_reviews_for %>
+      <%= link_to activity.trackable.book.title, book_path(activity.trackable.book) if activity.trackable %>
+    <% else %>
+      <%= activity.key %>
     <% end %>
-    <%= t :at %>&nbsp<%= activity.created_at.to_s[0..-4] if activity.created_at %><br>
+    <%= t :at %>&nbsp<%= activity.created_at.to_s[0..-4] if activity.created_at %>
+    <div>
+      <%= render "likes/like_form", activity: activity %>
+    </div>
   <% end %>
 <% end %>
+
+<%= paginate @user_activities, param_name: "page" %>
+<%= page_entries_info @user_activities, param_name: "page" %>

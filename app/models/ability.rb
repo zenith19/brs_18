@@ -7,8 +7,9 @@ class Ability
       can :manage, :all
     else
       can :read, :all
-      can :create, [Request, Review, Comment]
+      can :create, [Request, Review, Comment, Like]
       can [:edit, :update], User, id: user.id
+      can :destroy, Like
       can :update, Request do |request|
         request.try(:user) == user
       end

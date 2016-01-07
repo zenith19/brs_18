@@ -31,6 +31,15 @@ class User < ActiveRecord::Base
   mount_uploader :picture, ImageUploader
   validate :picture_size
 
+  scope :activities, ->(user){PublicActivity::Activity.
+      order(created_at: :desc).where "owner_id = ?", user.id}
+  scope :review_activities, ->(user){PublicActivity::Activity.
+      order(created_at: :desc).where "trackable_type = ? AND owner_id = ?",
+      "Review", user.id}
+
+  def liked? activity
+    self.likes.exists? activity_id: activity.id
+  end
   def follow other_user
     active_relationships.create followed_id: other_user.id
   end
@@ -46,8 +55,4 @@ class User < ActiveRecord::Base
   def followed_by? other_user
     followers.include? other_user
   end
-
-  scope :review_activities, ->(user){PublicActivity::Activity.
-    order(created_at: :desc).where "trackable_type = ? AND owner_id = ?",
-    "Review", user.id}
 end
