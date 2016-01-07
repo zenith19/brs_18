@@ -46,7 +46,7 @@
             <p><%= t "publish_date" %>: <%= @book.publish_date %></p>
             <p><%= t "page" %>: <%= @book.page %></p>
             <p><%= t "category" %>: <%= @book.category.name %></p>
-            <p><%= t "total_review" %>: <span id="book-rater"><%= @total_reviewer %></span></p>
+            <p><%= t "total_review" %>: <span id="book-rater"><%= @book.reviews.size %></span></p>
           </div>
         </div>
         <div class="panel panel-default">

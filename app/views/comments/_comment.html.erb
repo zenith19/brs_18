@@ -1,6 +1,10 @@
 <li class="media media-replied" id="comments-<%= comment.id %>">
   <a class="pull-left" href="#">
-    <%= image_tag comment.user.picture_url(:thumb), class: "media-object img-circle" %>
+    <% if comment.user.picture? %>
+      <%= image_tag comment.user.picture_url(:thumb), class: "media-object img-circle" %>
+    <% else %>
+      <%= image_tag "default-user.png", class: "media-object img-circle default_image_size" %>
+    <% end %>
   </a>
   <div class="media-body">
     <div class="well well-lg">

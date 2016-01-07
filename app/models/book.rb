@@ -10,10 +10,12 @@ class Book < ActiveRecord::Base
   after_initialize :init_rating
 
   validates :title, presence: true, uniqueness: {case_sensitive: false}
+  validates :description, presence: true
   validates :author, presence: true
   validates :page, presence: true, numericality: {minimum: 1}
   validates :publish_date, presence: true
   validates :category, presence: true
+  validates :book_photos, presence: true
 
   accepts_nested_attributes_for :book_photos, allow_destroy: true,
     reject_if: proc {|attributes| attributes[:image].blank?}

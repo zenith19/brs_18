@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @users = @users.page(params[:page]).per 20
+    @users = @users.only_users.page(params[:page]).per 20
   end
 
   def show

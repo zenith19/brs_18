@@ -1,54 +1,62 @@
 vn:
-  about: "Trong khoảng"
-  access_denied: "truy cập bị từ chối"
-  account: "tài khoản"
-  action: "hoạt động"
-  add_request: "Thêm một yêu cầu"
-  added_as_favourite: "Trong Danh sách yêu thích"
+  about: Trong khoảng
+  access_denied: truy cập bị từ chối
+  account: tài khoản
+  action: hoạt động
+  add_request: Thêm một yêu cầu
+  added_as_favourite: Trong Danh sách yêu thích
   admin:
     requests:
       index:
-        all_request: "Tất cả các yêu cầu"
-        book_author: "tác giả"
-        book_title: "Tiêu đề"
-        link: "liên kết"
-        publisher: "Nhà phát hành"
-        status: "Tình trạng"
-        user_name: "tên người dùng"
-      update:
-        flash_request_update: "Yêu cầu cập nhật"
+        all_request: Tất cả các yêu cầu
+        book_author: tác giả
+        book_title: Tiêu đề
+        link: liên kết
+        publisher: Nhà phát hành
+        status: Tình trạng
+        user_name: tên người dùng
       requests:
-        approve_button: "Phê duyệt"
-        cancel_button: "hủy bỏ"
-        change_status: "Thay đổi trạng thái"
-  all_users: "Tất cả người dùng"
-  confirm_message_delete: "Bạn có chắc chắn muốn xóa"
-  contact: "Liên Hệ"
-  delete_success_message: "dùng đã bị xóa"
-  delete_user: "Xóa bỏ"
-  dev_by: "Được phát triển bởi"
-  edit_user: "Chỉnh sửa"
-  email: "E-mail"
-  home: "Nhà"
-  log_in: "Đăng nhập"
-  log_out: "Đăng xuất"
-  mark_as_favorite: "Đánh dấu là yêu thích"
-  name: "Tên"
-  profile: "Hồ sơ"
-  request: "yêu cầu"
+        approve_button: Phê duyệt
+        cancel_button: hủy bỏ
+        change_status: Thay đổi trạng thái
+      update:
+        flash_request_update: Yêu cầu cập nhật
+  all_users: Tất cả người dùng
+  at: tại
+  book_finished: Sách hoàn thành!
+  confirm_message_delete: Bạn có chắc chắn muốn xóa
+  contact: Liên Hệ
+  created_reviews_for: đánh giá tạo ra cho
+  delete_success_message: dùng đã bị xóa
+  delete_user: Xóa bỏ
+  dev_by: Được phát triển bởi
+  edit_user: Chỉnh sửa
+  email: E-mail
+  finish_reading: Kết thúc đọc
+  follow: Theo
+  followers: Người theo dõi
+  following: tiếp theo
+  home: Nhà
+  image_size_notification: Kích thước hình ảnh nên được ít hơn 3MB
+  log_in: Đăng nhập
+  log_out: Đăng xuất
+  mark_as_favorite: Đánh dấu là yêu thích
+  name: Tên
+  profile: Hồ sơ
+  request: yêu cầu
   requests:
     create:
-      flash_request_success: "Yêu cầu tạo thành công"
+      flash_request_success: Yêu cầu tạo thành công
     index:
-      all_request: "Các yêu cầu của tôi"
-      book_author: "Tên tác giả"
-      book_title: "Tên sách"
-      link: "liên kết"
-      publisher: "nhà phát hành"
-      status: "trạng thái"
+      all_request: Các yêu cầu của tôi
+      book_author: Tên tác giả
+      book_title: Tên sách
+      link: liên kết
+      publisher: nhà phát hành
+      status: trạng thái
     new:
-      flash_request_success: "Yêu cầu tạo thành công"
-      sent_request: "Đã gửi yêu cầu"
+      flash_request_success: Yêu cầu tạo thành công
+      sent_request: Đã gửi yêu cầu
     requests:
       cancel_button: "hủy bỏ"
   sign_up_now: "Đăng ký ngay!"

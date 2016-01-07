@@ -1,6 +1,6 @@
 class Admin::BooksController < ApplicationController
   load_and_authorize_resource
-  before_action :load_categories, only: [:new, :edit]
+  before_action :load_categories, only: [:new, :edit, :create]
 
   def index
     @books = @books.latest.page(params[:page]).per 10
