@@ -18,13 +18,15 @@
         <hr>
         <p><%= @book.description.truncate 700 %></p>
         <hr>
-        <table>
-          <tr>
-            <td><%= render "shared/status_form" %></td>
-            <td>&nbsp;&nbsp;</td>
-            <td><%= render "shared/favourite" %></td>
-          </tr>
-        </table>
+        <% if user_signed_in? %>
+          <table>
+            <tr>
+              <td><%= render "shared/status_form" %></td>
+              <td>&nbsp;&nbsp;</td>
+              <td><%= render "shared/favourite" %></td>
+            </tr>
+          </table>
+        <% end %>
       </div>
     </div>
     <br>
@@ -62,10 +64,12 @@
     </div>
   </div>
   <div class="col-md-8">
-    <div id="review_form">
-      <%= render "reviews/form" unless @reviews.detect{|review|
-        review.user_id == current_user.id} %>
-    </div>
+    <% if user_signed_in? %>
+      <div id="review_form">
+        <%= render "reviews/form" unless @reviews.detect{|review|
+          review.user_id == current_user.id} %>
+      </div>
+    <% end %>
     <div class="tab-pane active" id="comments-logout">
       <ul class="media-list">
         <div id="reviews-book">

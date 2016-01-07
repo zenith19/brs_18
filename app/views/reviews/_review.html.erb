@@ -60,9 +60,11 @@
           <%= render review.comments.latest %>
         </div>
 
-        <div id="comments-review-form-<%= review.id %>">
-          <%= render "comments/form", review: review %>
-        </div>
+        <% if user_signed_in? %>
+          <div id="comments-review-form-<%= review.id %>">
+            <%= render "comments/form", review: review %>
+          </div>
+        <% end %>
       </ul>
     </div>
   </div>
