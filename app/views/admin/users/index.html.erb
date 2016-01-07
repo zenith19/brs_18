@@ -4,16 +4,15 @@
       <th></th>
       <th><%= t :name %></th>
       <th><%= t :email %></th>
-      <th><%= t :action %></th>
     </tr>
     <% @users.each do |user| %>
       <tr>
         <td><%= image_tag user.picture.url(:thumb) %></td>
         <td><%= link_to user.name, user %></td>
         <td><%= mail_to user.email %></td>
-        <td><%= link_to t(:edit),  edit_admin_user_path(user), class: "btn btn-primary btn-xs" %>
+        <td><%= link_to t(:edit),  edit_admin_user_path(user), class: "btn btn-primary" %>
         <%= link_to t(:delete), admin_user_path(user), method: :delete,
-          class: "btn btn-danger btn-xs", data: {confirm: t(:confirm_message_delete)} %></td>
+          class: "btn btn-danger", data: {confirm: t(:confirm_message_delete)} %></td>
       </tr>
     <% end %>
   </table>

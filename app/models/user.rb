@@ -33,10 +33,9 @@ class User < ActiveRecord::Base
 
   scope :activities, ->(user){PublicActivity::Activity.
       order(created_at: :desc).where "owner_id = ?", user.id}
-  scope :review_activities, ->(user){PublicActivity::Activity
-    .order(created_at: :desc).where "trackable_type = ? AND owner_id = ?",
-    "Review", user.id}
   scope :only_users, ->{where.not admin: true}
+  scope :like_count, ->(activity){Like.where(activity_id: activity.id).count}
+  scope :find_user, ->(id){self.find_by id: id}
 
   def liked? activity
     self.likes.exists? activity_id: activity.id

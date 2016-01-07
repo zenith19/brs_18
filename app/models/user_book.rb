@@ -7,7 +7,7 @@ class UserBook < ActiveRecord::Base
   scope :by_user, ->user_id {where user_id: user_id}
 
   include PublicActivity::Model
-  tracked except: [:destroy, :update],
+  tracked except: [:create, :destroy],
     owner: ->(controller, model) {controller && controller.current_user}
 
 end
