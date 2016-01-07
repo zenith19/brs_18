@@ -3,21 +3,21 @@ class CommentsController < ApplicationController
 
   def create
     @comment.user = current_user
-    @comment.save
+    CommentService.new(@comment).save
     respond_to do |format|
       format.js
     end
   end
 
   def update
-    @comment.update_attributes comment_params
+    CommentService.new(@comment).update comment_params
     respond_to do |format|
       format.js
     end
   end
 
   def destroy
-    @comment.destroy
+    CommentService.new(@comment).destroy
     respond_to do |format|
       format.js
     end
