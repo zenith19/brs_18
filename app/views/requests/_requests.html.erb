@@ -3,8 +3,8 @@
     <td><%= request.title %></td>
     <td><%= request.author %></td>
     <td><%= request.publisher %></td>
-    <td><%= request.link %></td>
-    <td><%= request.status %></td>
+    <td><%= link_to request.link, "http://#{request.link}" %></td>
+    <td><%= request.status.humanize %></td>
     <% if request.pending? %>
       <td align="right">
         <%= link_to t(".cancel_button"), request_path(request,

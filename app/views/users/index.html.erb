@@ -2,14 +2,16 @@
 
 <table class="table">
   <thead>
+    <th></th>
     <th><%= t :name %></th>
     <th><%= t :email %></th>
   </thead>
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= image_tag user.picture.url(:thumb) %></td>
         <td><%= link_to user.name, user %></td>
-        <td><%= user.email %></td>
+        <td><%= mail_to user.email %></td>
       </tr>
     <% end %>
     </tbody>
