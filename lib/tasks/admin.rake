@@ -21,5 +21,15 @@ namespace :admin do
         _dump_errors exception
       end
     end
+    desc "Create admin with specific attributes"
+    task :specify, [:name, :email] => :environment do |t, args|
+      begin
+        obj = FactoryGirl.create :admin, name: args[:name], email: args[:email]
+        puts "#{obj.class.name} has been created!"
+        obj.attributes.each {|_name, value| puts "#{_name}: #{value}"}
+      rescue => exception
+        _dump_errors exception
+      end
+    end
   end
 end
