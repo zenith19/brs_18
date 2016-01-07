@@ -6,9 +6,9 @@
     <td><%= request.link %></td>
     <td><%= request.status %></td>
     <% if request.pending? %>
-      <td>
-        <%= link_to t(".cancel_button"), request_path(request, 
-        "request[status]": request.status), method: :put, data:{confirm: 
+      <td align="right">
+        <%= link_to t(".cancel_button"), request_path(request,
+        "request[status]": request.status), method: :put, data:{confirm:
         I18n.t("confirm_message")}, class: "btn btn-danger"  %>
       </td>
     <% end %>

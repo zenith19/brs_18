@@ -8,8 +8,8 @@
     <td><%= request.status %></td>
     <td align="right", id="drop_down">
       <%= form_for [:admin, request] do |f| %>
-        <td><%= f.select :status, collection: @statuses.keys.to_a %></td>
-        <td><%= f.submit t(".change_status"), class: "btn btn-success" %></td>
+        <td><%= f.select :status, {collection: @statuses.keys.to_a}, {prompt: false}, {class: "form-control"} %></td>
+        <td><%= f.submit t(".change_status"), class: "btn btn-primary" %></td>
       <% end %>
     </td>
   </tr>
