@@ -22,27 +22,44 @@
     </div>
   </div>
 </div>
+<br><br><br>
+
 <table class="table">
-  <thead>
-    <th></th>
-    <th><%= t "title" %></th>
-    <th><%= t "author" %></th>
-    <th><%= t "category" %></th>
-    <th><%= t "rating" %></th>
-    <th><%= t "publish_date" %></th>
-    <th><%= t "page" %></th>
-  </thead>
   <tbody>
     <% @books.each do |book|%>
       <tr>
-        <td><%= image_tag book.book_photos.first.image.url(:thumb) if
-          book.book_photos.exists? %></td>
-        <td><%= link_to book.title, book %></td>
-        <td><%= book.author %></td>
-        <td><%= book.category.name %></td>
-        <td><%= book.rating %></td>
-        <td><%= l book.publish_date, format: :short %></td>
-        <td><%= book.page %></td>
+        <td>
+          <div class="row">
+            <div class="col-md-2">
+              <%= link_to image_tag(book.book_photos.first.image.url(:book_medium)), book %>
+            </div>
+            <div class="col-md-10">
+              <div class="panel-body paddin-fix">
+                <span id="book_title">
+                  <font size="5"><span class="post_title"><%= link_to book.title, book %></span></font>
+                </span>
+                <span class="pull-right" >
+                  <div id="book-star-rating">
+                    <%= render "shared/star_rating", book: book %>
+                  </div>
+                </span>
+                <br>
+                <%= book.author %>
+                <hr>
+                <p><%= book.description.truncate 500 %></p>
+                <hr>
+                <table>
+                  <tr>
+                    <td><%= t "publish_date" %>: <%= book.publish_date %></td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td><%= t "page" %>: <%= book.page %></td>
+                  </tr>
+                </table>
+              </div>
+              <br><br>
+            </div>
+          </div>
+        </td>
       </tr>
     <% end %>
   </tbody>

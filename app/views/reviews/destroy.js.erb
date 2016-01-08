@@ -1,6 +1,5 @@
 $("#book-rating").html("<%= @book.rating %>");
 $("#book-rater").html("<%= @book.reviews.size %>");
 $("#review_<%= @review.id %>").remove();
-$("#book-star-rating").html("<%= escape_javascript render(
-  partial: "shared/star_rating").html_safe %>");
+$("#book-star-rating").html("<%= j render "shared/star_rating", book: @book %>");
 $("#review_form").show();

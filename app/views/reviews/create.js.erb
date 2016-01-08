@@ -6,6 +6,5 @@
   $(".rating_box").val("1")
   $(".review_box").val("");
   $("#book-rater").html("<%= @book.reviews.size %>");
-  $("#book-star-rating").html("<%= escape_javascript render(
-    partial: "shared/star_rating").html_safe %>");
+  $("#book-star-rating").html("<%= j render "shared/star_rating", book: @book %>");
 <% end %>
