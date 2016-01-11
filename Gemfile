@@ -26,6 +26,7 @@ gem "devise"
 gem "devise-i18n"
 gem "devise-i18n-views"
 gem "factory_girl_rails"
+gem "bootstrap-datepicker-rails"
 group :development, :test do
   gem "pry"
   gem "web-console", "2.0.0.beta3"
