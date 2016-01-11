@@ -9,12 +9,18 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= image_tag user.picture.url(:thumb) %></td>
+        <td>
+          <% if user.picture? %>
+            <%= image_tag user.picture.url(:thumb)%>
+          <% else %>
+            <%= image_tag "default-user.png", class: "default_image_size" %>
+          <% end %>
+        </td>
         <td><%= link_to user.name, user %></td>
         <td><%= mail_to user.email %></td>
       </tr>
     <% end %>
-    </tbody>
+  </tbody>
 </table>
 
 <%= paginate @users %>
