@@ -1,3 +1,5 @@
+require "elasticsearch/model"
+
 class Book < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
@@ -7,10 +9,13 @@ class Book < ActiveRecord::Base
   has_many :users, through: :user_books
   belongs_to :user
 
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
+
   after_initialize :init_rating
 
   validates :title, presence: true, uniqueness: {case_sensitive: false}
-  validates :description, presence: true
+  # validates :description, presence: true
   validates :author, presence: true
   validates :page, presence: true, numericality: {minimum: 1}
   validates :publish_date, presence: true
@@ -22,9 +27,9 @@ class Book < ActiveRecord::Base
 
   scope :latest, -> {order "created_at DESC"}
   scope :favourite, -> user_id{joins(:user_books)
-    .where user_books: {user_id: user_id, favourite: true}}
+                       .where user_books: {user_id: user_id, favourite: true}}
   scope :not_favourite, -> user_id{where.not id: [(favourite user_id).ids]}
-  
+
   scope :filter_book, ->(criteria) do
     search = criteria.split
     case search[0]

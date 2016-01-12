@@ -1,29 +1,12 @@
 <h1><%= t "all_books" %></h1>
-<div class="pull-left">
-  <div class="input-group" id="adv-search">
-    <input readonly="true" type="text" class="form-control" placeholder="<%= t "books_search_placeholder" %>"/>
-    <div class="input-group-btn">
-      <div class="btn-group" role="group">
-        <div class="dropdown dropdown-lg">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <span class="caret"></span>
-          </button>
-          <div class="dropdown-menu dropdown-menu-right" role="menu">
-            <%= search_form_for @search, class: "form-horizontal", role: "form" do |f| %>
-              <%= render "search_fields", f: f %>
-              <button type="submit" class="btn btn-primary">
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                <%= t"search" %>
-              </button>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<br><br><br>
-
+<table>
+  <tr>
+    <%= form_tag books_path, method: :get do %>
+      <td><%= text_field_tag :query, params[:query] %></td>
+      <td><%= submit_tag "Search" %></td>
+    <% end %>
+  </tr>
+</table>
 <table class="table">
   <tbody>
     <% @books.each do |book|%>
