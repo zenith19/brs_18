@@ -3,8 +3,11 @@ class BooksController < ApplicationController
 
   def index
     @categories = Category.all
-    @search = Book.search params[:q]
-    @books = @search.result.latest.page(params[:page]).per 10
+    if params[:query].blank?
+      @books = Book.page(params[:page]).per 10
+    else
+      @books = Book.search(params[:query]).records.page(params[:page]).per 10
+    end
   end
 
   def show
