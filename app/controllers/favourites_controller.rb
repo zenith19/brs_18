@@ -3,7 +3,7 @@ class FavouritesController < ApplicationController
 
   def update
     @user_book = UserBook.find params[:id]
-    FavouriteService.new(@user_book).update book_params
+    FavouriteService.new(@user_book, current_user).update book_params
     respond_to do |format|
       format.js
     end

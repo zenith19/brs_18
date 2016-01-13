@@ -14,7 +14,7 @@
         <td>
           <div class="row">
             <div class="col-md-2">
-              <%= link_to image_tag(book.book_photos.first.image.url(:book_medium)), book %>
+              <%= link_to image_tag(book.book_photos.first.image.url(:book_medium)), book if book.book_photos.exists? %>
             </div>
             <div class="col-md-10">
               <div class="panel-body paddin-fix">
@@ -29,7 +29,7 @@
                 <br>
                 <%= book.author %>
                 <hr>
-                <p><%= book.description.truncate 500 %></p>
+                <p><%= book.description.truncate 500 if book.description %></p>
                 <hr>
                 <table>
                   <tr>

@@ -1,0 +1,3 @@
+<% if activity.trackable %>
+  <%= raw t :commented_on_review, review_content: link_to(truncate(activity.trackable.review.content, length:15), activity.trackable.review.book) %>
+<% end %>

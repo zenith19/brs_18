@@ -1,0 +1,4 @@
+<% if activity.trackable %>
+  <% user = activity.trackable.followed %>
+  <%= raw t :followed, user_name: link_to(user.name, user) %>
+<% end %>
