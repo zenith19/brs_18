@@ -3,7 +3,8 @@ class Admin::BooksController < ApplicationController
   before_action :load_categories, only: [:new, :edit, :create]
 
   def index
-    @books = @books.latest.page(params[:page]).per 10
+    @categories = Category.all
+    @books = Book.custom_search(params).page(params[:page]).per 10
   end
 
   def new
