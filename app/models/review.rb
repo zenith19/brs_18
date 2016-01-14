@@ -15,6 +15,6 @@ class Review < ActiveRecord::Base
   scope :rate_points, -> book_id{where(book_id: book_id).average "rating"}
 
   include PublicActivity::Model
-  tracked except: [:destroy, :destroy],
+  tracked except: [:destroy, :update],
     owner: ->(controller, model) {controller && controller.current_user}
 end

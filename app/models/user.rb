@@ -5,13 +5,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
   belongs_to :books
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_many :requests
-  has_many :reviews
-  has_many :user_books
+  has_many :reviews, dependent: :destroy
+  has_many :user_books, dependent: :destroy
   has_many :books, through: :user_books
   has_many :activities
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_many :active_relationships,
             class_name: Relationship.name,
             foreign_key: :follower_id,

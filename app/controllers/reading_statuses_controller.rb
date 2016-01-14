@@ -3,7 +3,7 @@ class ReadingStatusesController < ApplicationController
 
   def update
     @user_book = UserBook.find params[:id]
-    ReadingStatusService.new(@user_book).update user_book_params
+    ReadingStatusService.new(@user_book, current_user).update user_book_params
     respond_to do |format|
       format.html {redirect_to @user_book.book}
       format.js {}

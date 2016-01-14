@@ -16,7 +16,7 @@
           </div>
         </span>
         <hr>
-        <p><%= @book.description.truncate 700 %></p>
+        <p><%= @book.description.truncate 700 if @book.description %></p>
         <hr>
         <% if user_signed_in? %>
           <table>

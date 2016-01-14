@@ -2,22 +2,8 @@
 
 <% if @user_activities.any? %>
   <% @user_activities.each do |activity| %>
-    <%= activity.owner.name if activity.owner %>
-    <% if activity.key == "review.create" %>
-      <%= t :created_reviews_for %>
-      <%= link_to activity.trackable.book.title, book_path(activity.trackable.book) if activity.trackable %>
-    <% elsif activity.key == "relationship.create" %>&nbsp;<%= t :followed %>
-      <% followed_user = User.find_user activity.trackable.followed_id if activity.trackable %>
-      <%= link_to followed_user.name, followed_user if activity.trackable %>
-    <% elsif activity.key == "user_book.update" %>
-      <%= t :book_status %>
-      <%= link_to activity.trackable.book.title, book_path(activity.trackable.book) if activity.trackable %>
-    <% elsif activity.key == "comment.create" %>&nbsp;<%= t :commented_on_review %>
-      <%= link_to truncate(activity.trackable.review.content, length:15),
-        book_path(activity.trackable.review.book) if activity.trackable %>
-    <% else %>
-      <%= activity.key %>
-    <% end %>
+    <%= link_to activity.owner.name, activity.owner if activity.owner %>
+    <%= render_activity activity %>
     <%= t :at %>&nbsp<%= activity.created_at.to_s[0..-4] if activity.created_at %>
     <div>
       <table>

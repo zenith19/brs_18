@@ -1,0 +1,3 @@
+<% if activity.trackable %>
+    <%= raw t :created_reviews_for, book_title: link_to(activity.trackable.book.title, activity.trackable.book) %>
+<% end %>
